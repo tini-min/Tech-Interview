@@ -6,10 +6,41 @@
 ## Min_Stack 구현
 > 최솟값을 O(1) 연산으로 도출하는 Stack을 파이썬으로 구현
 
-<details>
-<summary><strong> 답안예시 (python) </strong></summary>
-<div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#a71d5d">class</span>&nbsp;Stack&nbsp;:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">def</span>&nbsp;__init__(<span style="color:#066de2">self</span>)&nbsp;:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">self</span>.container&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;[]</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">self</span>.min_cont&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;[]</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">def</span>&nbsp;push(<span style="color:#066de2">self</span>,&nbsp;elem)&nbsp;:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">self</span>.container.append(elem)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;<span style="color:#a71d5d">not</span>&nbsp;<span style="color:#066de2">self</span>.min_cont&nbsp;:&nbsp;<span style="color:#066de2">self</span>.min_cont.append(elem)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">else</span>&nbsp;:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;<span style="color:#066de2">self</span>.min_cont[<span style="color:#0086b3"></span><span style="color:#a71d5d">-</span><span style="color:#0099cc">1</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">&gt;</span><span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;elem&nbsp;:&nbsp;<span style="color:#066de2">self</span>.min_cont.append(elem)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">def</span>&nbsp;pop(<span style="color:#066de2">self</span>)&nbsp;:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;<span style="color:#066de2">len</span>(<span style="color:#066de2">self</span>.container)&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">=</span><span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">0</span>&nbsp;:&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#066de2">None</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">self</span>.container.pop()</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;<span style="color:#066de2">self</span>.min_cont[<span style="color:#0086b3"></span><span style="color:#a71d5d">-</span><span style="color:#0099cc">1</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">=</span><span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;top&nbsp;:&nbsp;<span style="color:#066de2">self</span>.min_cont.pop()</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;top</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">def</span>&nbsp;size(<span style="color:#066de2">self</span>)&nbsp;:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#066de2">len</span>(<span style="color:#066de2">self</span>.container)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">def</span>&nbsp;empty(<span style="color:#066de2">self</span>)&nbsp;:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#066de2">int</span>(<span style="color:#a71d5d">not</span>&nbsp;<span style="color:#066de2">self</span>.container)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">def</span>&nbsp;top(<span style="color:#066de2">self</span>)&nbsp;:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;<span style="color:#066de2">self</span>.size()&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">=</span><span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">0</span>&nbsp;:&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#066de2">None</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#066de2">self</span>.container[<span style="color:#0086b3"></span><span style="color:#a71d5d">-</span><span style="color:#0099cc">1</span>]</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">def</span>&nbsp;min(<span style="color:#066de2">self</span>)&nbsp;:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;<span style="color:#066de2">len</span>(<span style="color:#066de2">self</span>.container)&nbsp;<span style="color:#0086b3"></span><span style="color:#a71d5d">=</span><span style="color:#0086b3"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">0</span>&nbsp;:&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#066de2">None</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#066de2">self</span>.min_cont[<span style="color:#0086b3"></span><span style="color:#a71d5d">-</span><span style="color:#0099cc">1</span>]</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#e5e5e5text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
-</details>
+```python
+class Stack :
+	def __init__(self) :
+		self.container = []
+		self.min_cont = []
+
+	def push(self, elem) :
+		self.container.append(elem)
+
+		if not self.min_cont : self.min_cont.append(elem)
+		else :
+			if self.min_cont[-1] >= elem : self.min_cont.append(elem)
+
+	def pop(self) :
+		if len(self.container) == 0 : return None
+
+		top = self.container.pop()
+		if self.min_cont[-1] == top : self.min_cont.pop()
+
+		return top
+
+	def size(self) :
+		return len(self.container)
+
+	def empty(self) :
+		return int(not self.container)
+
+	def top(self) :
+		if self.size() == 0 : return None
+		return self.container[-1]
+
+	def min(self) :
+		if len(self.container) == 0 : return None
+		return self.min_cont[-1]
+```
 
 ## 나선
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1491)
@@ -28,9 +59,9 @@ N과 M이 주어졌을 때, 남서쪽 모서리는 (0,0) 남동쪽 모서리는 
 **출력**<br>
 첫째 줄에 정답을 출력한다.<br>
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 1 (python -> 구현) </summary>
-<pre><code class = 'python'>
+#### 답안예시 1 (python -> 구현)
+
+```python
 x, y = map(int, input().split())
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
@@ -42,12 +73,11 @@ while x != 0 and y != 0 :
 	rotate += 1
 	x -= 1 * abs(dx[rotate % 4]); y -= 1 * abs(dy[rotate % 4]);
 print(now[0], now[1])
-</code></pre>
-</details>
+```
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 2 (python -> 수학) </summary>
-<pre><code class = 'python'>
+#### 답안예시 2 (python -> 수학)
+
+```python
 w, h = map(int, input().split())
 short = min(w, h)
 x = y = 0
@@ -61,8 +91,7 @@ else:
     x = cycle - 1
     y = cycle
 print(x, y)
-</code></pre>
-</details>
+```
 
 ## 달팽이
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1913)
@@ -93,9 +122,8 @@ print(x, y)
 **출력**<br>
 N개의 줄에 걸쳐 표를 출력한다. 각 줄에 N개의 자연수를 한 칸씩 띄어서 출력하면 되며, 자릿수를 맞출 필요가 없다. N+1번째 줄에는 입력받은 자연수의 좌표를 나타내는 두 정수를 한 칸 띄어서 출력한다.
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 (python) </summary>
-<div markdown="1">
+#### 답안예시 (python)
+
 ```python
 n = int(input())
 target = int(input())
@@ -127,8 +155,6 @@ for x in range(n) :
 
 print(answer[0], answer[1])
 ```
-</div>
-</details>
 
 ## 두 수의 합
 ### [문제 - 백준 Silver4](https://www.acmicpc.net/problem/3273)
@@ -141,9 +167,8 @@ n개의 서로 다른 양의 정수 a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</
 **출력**<br>
 문제의 조건을 만족하는 쌍의 개수를 출력한다.<br>
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 1 (python -> dictionary) </summary>
-<div markdown="1">
+#### 답안예시 1 (python -> dictionary)
+
 ```python
 from bisect import bisect_left
 
@@ -163,12 +188,9 @@ for i in arr :
 	if arr[ind] == dic[i] : answer += 1
 print(answer // 2)
 ```
-</div>
-</details>
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 2 (python -> two pointer)  </summary>
-<div markdown="1">
+#### 답안예시 2 (python -> two pointer) 
+
 ```python
 n = int(input())
 arr = list(map(int, input().split()))
@@ -190,8 +212,6 @@ while start < end :
 
 print(answer)
 ```
-</div>
-</details>
 
 ## 삼각형으로 자르기
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1198)
@@ -208,9 +228,8 @@ print(answer)
 **출력**<br>
 첫째 줄에 문제의 정답을 출력한다. 절대/상대 오차는 10<sup>-9</sup>까지 허용한다.<br>
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 (python) </summary>
-<div markdown="1">
+#### 답안예시 (python)
+
 ```python
 from itertools import combinations
 
@@ -232,16 +251,13 @@ for tri in combinations(points, 3) :
 
 print(answer)
 ```
-</div>
-</details>
 
 ## 정렬 알고리즘 작성
 
 시간복잡도가 최악인 경우 O(n log n)인 정렬 알고리즘을 작성하시오
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 1 (python : Merge Sort) </summary>
-<div markdown="1">
+#### 답안예시 1 (python : Merge Sort)
+
 ```python
 def merge(arr1, arr2) :
 	sorted_arr = []
@@ -266,12 +282,9 @@ def mergeSort(arr) :
 
 	return merge(arr1, arr2)
 ```
-</div>
-</details>
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 2 (python : Heap Sort) </summary>
-<div markdown="1">
+#### 답안예시 2 (python : Heap Sort)
+
 ```python
 import heapq
 
@@ -284,12 +297,9 @@ def heapSort(arr) :
 
 	return sorted_arr
 ```
-</div>
-</details>
 
-<details>
-<summary style = "font-weight:bold"> (보충) Heap 구현 </summary>
-<div markdown="1">
+#### (보충) Heap 구현
+
 ```python
 def heapSort(arr) :
 	for i in range(1, len(arr)) :
@@ -316,12 +326,9 @@ def heapSort(arr) :
 
 	return arr
 ```
-</div>
-</details>
 
-<details>
-<summary> (번외) Quick Sort는 평균적인 시간 복잡도는 O(n log n)이지만 최악의 경우 O(n^2)이 된다. </summary>
-<div markdown="1">
+##### (번외) Quick Sort는 평균적인 시간 복잡도는 O(n log n)이지만 최악의 경우 O(n^2)이 된다.
+
 ```python
 def quickSort(arr) :
 	if len(arr) <= 1 : return arr
@@ -333,8 +340,6 @@ def quickSort(arr) :
 
 	return quickSort(left_side) + [pivot] + quickSort(right_side)
 ```
-</div>
-</details>
 
 ### 좌표 압축
 #### [문제 - 백준 Silver2](https://www.acmicpc.net/problem/18870)
@@ -357,9 +362,8 @@ X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub>에 좌표 압축을 적용한 �
 1 ≤ N ≤ 1,000,000<br>
 -10<sup>9</sup> ≤ X<sub>i</sub> ≤ 10<sup>9</sup><br>
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 (python) </summary>
-<div markdown="1">
+#### 답안예시 (python)
+
 ```python
 from bisect import bisect_left
 
@@ -370,8 +374,6 @@ sorted_arr = sorted(list(set(arr)))
 for i in arr :
 	print(bisect_left(sorted_arr, i), end = ' ')
 ```
-</div>
-</details>
 
 ## 최소공배수
 ### [문제 - 백준 Silver5](https://www.acmicpc.net/problem/1934)
@@ -386,9 +388,8 @@ for i in arr :
 **출력**<br>
 첫째 줄부터 T개의 줄에 A와 B의 최소공배수를 입력받은 순서대로 한 줄에 하나씩 출력한다.<br>
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 1 (python -> math 모듈) </summary>
-<div markdown="1">
+#### 답안예시 1 (python -> math 모듈)
+
 ```python
 import math
 
@@ -398,12 +399,9 @@ for tc in range(t) :
 	gcd = math.gcd(x, y)
 	print(x * (y // gcd))
 ```
-</div>
-</details>
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 2 (python -> 수학) </summary>
-<div markdown="1">
+#### 답안예시 2 (python -> 수학)
+
 ```python
 t = int(input())
 for tc in range(t) :
@@ -417,8 +415,6 @@ for tc in range(t) :
 	gcd = arr[-1]
 	print(x * (y // gcd))
 ```
-</div>
-</details>
 
 ## 피보나치 함수
 ### [문제 - Silver3](https://www.acmicpc.net/problem/1003)
@@ -458,9 +454,8 @@ fibonacci(3)은 fibonacci(2)와 fibonacci(1)의 결과를 얻고, 2를 리턴한
 **출력**<br>
 각 테스트 케이스마다 0이 출력되는 횟수와 1이 출력되는 횟수를 공백으로 구분해서 출력한다.<br>
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 1 (python -> 시간복잡도 각 테스트 케이스별 O(n)) </summary>
-<div markdown="1">
+#### 답안예시 1 (python -> 시간복잡도 각 테스트 케이스별 O(n))
+
 ```python
 t = int(input())
 d = [[0, 0] for _ in range(41)]
@@ -473,12 +468,8 @@ for tc in range(t) :
 	n = int(input())
 	print(d[n][0], d[n][1])
 ```
-</div>
-</details>
 
-<details>
-<summary style = "font-weight:bold"> 답안예시 2 (python -> 시간복잡도 각 테스트 케이스 별 O(2^n)) </summary>
-<div markdown="1">
+#### 답안예시 2 (python -> 시간복잡도 각 테스트 케이스 별 O(2^n))
 >백준 채점 시 시간 초과 발생
 
 ```python
@@ -500,5 +491,3 @@ for tc in range(t) :
 	cnt = fibonacci(n, [0, 0])
 	print(cnt[0], cnt[1])
 ```
-</div>
-</details>
