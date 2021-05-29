@@ -6,6 +6,10 @@
 ## Min_Stack 구현
 > 최솟값을 O(1) 연산으로 도출하는 Stack을 파이썬으로 구현
 
+<details>
+<summary>답안예시 (python)</summary>
+<div markdown="1">
+
 ```python
 class Stack :
 	def __init__(self) :
@@ -41,6 +45,8 @@ class Stack :
 		if len(self.container) == 0 : return None
 		return self.min_cont[-1]
 ```
+</div>
+</details>
 
 ## 나선
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1491)
@@ -59,7 +65,9 @@ N과 M이 주어졌을 때, 남서쪽 모서리는 (0,0) 남동쪽 모서리는 
 **출력**<br>
 첫째 줄에 정답을 출력한다.<br>
 
-#### 답안예시 1 (python -> 구현)
+<details>
+<summary>답안예시 1 (python -> 구현)</summary>
+<div markdown="1">
 
 ```python
 x, y = map(int, input().split())
@@ -74,6 +82,8 @@ while x != 0 and y != 0 :
 	x -= 1 * abs(dx[rotate % 4]); y -= 1 * abs(dy[rotate % 4]);
 print(now[0], now[1])
 ```
+</div>
+</details>
 
 #### 답안예시 2 (python -> 수학)
 
