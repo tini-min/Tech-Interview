@@ -7,9 +7,8 @@
 > 최솟값을 O(1) 연산으로 도출하는 Stack을 파이썬으로 구현
 
 <details>
-<summary>답안예시 (python)</summary>
+<summary style = "font-weight:bold"> 답안예시 (python) </summary>
 <div markdown="1">
-
 ```python
 class Stack :
 	def __init__(self) :
@@ -66,9 +65,8 @@ N과 M이 주어졌을 때, 남서쪽 모서리는 (0,0) 남동쪽 모서리는 
 첫째 줄에 정답을 출력한다.<br>
 
 <details>
-<summary>답안예시 1 (python -> 구현)</summary>
+<summary style = "font-weight:bold"> 답안예시 1 (python -> 구현) </summary>
 <div markdown="1">
-
 ```python
 x, y = map(int, input().split())
 dx = [1, 0, -1, 0]
@@ -85,8 +83,9 @@ print(now[0], now[1])
 </div>
 </details>
 
-#### 답안예시 2 (python -> 수학)
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 2 (python -> 수학) </summary>
+<div markdown="1">
 ```python
 w, h = map(int, input().split())
 short = min(w, h)
@@ -102,6 +101,8 @@ else:
     y = cycle
 print(x, y)
 ```
+</div>
+</details>
 
 ## 달팽이
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1913)
@@ -132,8 +133,9 @@ print(x, y)
 **출력**<br>
 N개의 줄에 걸쳐 표를 출력한다. 각 줄에 N개의 자연수를 한 칸씩 띄어서 출력하면 되며, 자릿수를 맞출 필요가 없다. N+1번째 줄에는 입력받은 자연수의 좌표를 나타내는 두 정수를 한 칸 띄어서 출력한다.
 
-#### 답안예시 (python)
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 (python) </summary>
+<div markdown="1">
 ```python
 n = int(input())
 target = int(input())
@@ -165,6 +167,8 @@ for x in range(n) :
 
 print(answer[0], answer[1])
 ```
+</div>
+</details>
 
 ## 두 수의 합
 ### [문제 - 백준 Silver4](https://www.acmicpc.net/problem/3273)
@@ -177,8 +181,9 @@ n개의 서로 다른 양의 정수 a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</
 **출력**<br>
 문제의 조건을 만족하는 쌍의 개수를 출력한다.<br>
 
-#### 답안예시 1 (python -> dictionary)
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 1 (python -> dictionary) </summary>
+<div markdown="1">
 ```python
 from bisect import bisect_left
 
@@ -198,9 +203,12 @@ for i in arr :
 	if arr[ind] == dic[i] : answer += 1
 print(answer // 2)
 ```
+</div>
+</details>
 
-#### 답안예시 2 (python -> two pointer) 
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 2 (python -> two pointer)  </summary>
+<div markdown="1">
 ```python
 n = int(input())
 arr = list(map(int, input().split()))
@@ -222,6 +230,8 @@ while start < end :
 
 print(answer)
 ```
+</div>
+</details>
 
 ## 삼각형으로 자르기
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1198)
@@ -238,8 +248,9 @@ print(answer)
 **출력**<br>
 첫째 줄에 문제의 정답을 출력한다. 절대/상대 오차는 10<sup>-9</sup>까지 허용한다.<br>
 
-#### 답안예시 (python)
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 (python) </summary>
+<div markdown="1">
 ```python
 from itertools import combinations
 
@@ -261,13 +272,16 @@ for tri in combinations(points, 3) :
 
 print(answer)
 ```
+</div>
+</details>
 
 ## 정렬 알고리즘 작성
 
 시간복잡도가 최악인 경우 O(n log n)인 정렬 알고리즘을 작성하시오
 
-#### 답안예시 1 (python : Merge Sort)
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 1 (python : Merge Sort) </summary>
+<div markdown="1">
 ```python
 def merge(arr1, arr2) :
 	sorted_arr = []
@@ -292,9 +306,12 @@ def mergeSort(arr) :
 
 	return merge(arr1, arr2)
 ```
+</div>
+</details>
 
-#### 답안예시 2 (python : Heap Sort)
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 2 (python : Heap Sort) </summary>
+<div markdown="1">
 ```python
 import heapq
 
@@ -307,9 +324,12 @@ def heapSort(arr) :
 
 	return sorted_arr
 ```
+</div>
+</details>
 
-#### (보충) Heap 구현
-
+<details>
+<summary style = "font-weight:bold"> (보충) Heap 구현 </summary>
+<div markdown="1">
 ```python
 def heapSort(arr) :
 	for i in range(1, len(arr)) :
@@ -336,9 +356,12 @@ def heapSort(arr) :
 
 	return arr
 ```
+</div>
+</details>
 
-##### (번외) Quick Sort는 평균적인 시간 복잡도는 O(n log n)이지만 최악의 경우 O(n^2)이 된다.
-
+<details>
+<summary> (번외) Quick Sort는 평균적인 시간 복잡도는 O(n log n)이지만 최악의 경우 O(n^2)이 된다. </summary>
+<div markdown="1">
 ```python
 def quickSort(arr) :
 	if len(arr) <= 1 : return arr
@@ -350,6 +373,8 @@ def quickSort(arr) :
 
 	return quickSort(left_side) + [pivot] + quickSort(right_side)
 ```
+</div>
+</details>
 
 ### 좌표 압축
 #### [문제 - 백준 Silver2](https://www.acmicpc.net/problem/18870)
@@ -372,8 +397,9 @@ X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub>에 좌표 압축을 적용한 �
 1 ≤ N ≤ 1,000,000<br>
 -10<sup>9</sup> ≤ X<sub>i</sub> ≤ 10<sup>9</sup><br>
 
-#### 답안예시 (python)
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 (python) </summary>
+<div markdown="1">
 ```python
 from bisect import bisect_left
 
@@ -384,6 +410,8 @@ sorted_arr = sorted(list(set(arr)))
 for i in arr :
 	print(bisect_left(sorted_arr, i), end = ' ')
 ```
+</div>
+</details>
 
 ## 최소공배수
 ### [문제 - 백준 Silver5](https://www.acmicpc.net/problem/1934)
@@ -398,8 +426,9 @@ for i in arr :
 **출력**<br>
 첫째 줄부터 T개의 줄에 A와 B의 최소공배수를 입력받은 순서대로 한 줄에 하나씩 출력한다.<br>
 
-#### 답안예시 1 (python -> math 모듈)
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 1 (python -> math 모듈) </summary>
+<div markdown="1">
 ```python
 import math
 
@@ -409,9 +438,12 @@ for tc in range(t) :
 	gcd = math.gcd(x, y)
 	print(x * (y // gcd))
 ```
+</div>
+</details>
 
-#### 답안예시 2 (python -> 수학)
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 2 (python -> 수학) </summary>
+<div markdown="1">
 ```python
 t = int(input())
 for tc in range(t) :
@@ -425,6 +457,8 @@ for tc in range(t) :
 	gcd = arr[-1]
 	print(x * (y // gcd))
 ```
+</div>
+</details>
 
 ## 피보나치 함수
 ### [문제 - Silver3](https://www.acmicpc.net/problem/1003)
@@ -464,8 +498,9 @@ fibonacci(3)은 fibonacci(2)와 fibonacci(1)의 결과를 얻고, 2를 리턴한
 **출력**<br>
 각 테스트 케이스마다 0이 출력되는 횟수와 1이 출력되는 횟수를 공백으로 구분해서 출력한다.<br>
 
-#### 답안예시 1 (python -> 시간복잡도 각 테스트 케이스별 O(n))
-
+<details>
+<summary style = "font-weight:bold"> 답안예시 1 (python -> 시간복잡도 각 테스트 케이스별 O(n)) </summary>
+<div markdown="1">
 ```python
 t = int(input())
 d = [[0, 0] for _ in range(41)]
@@ -478,8 +513,12 @@ for tc in range(t) :
 	n = int(input())
 	print(d[n][0], d[n][1])
 ```
+</div>
+</details>
 
-#### 답안예시 2 (python -> 시간복잡도 각 테스트 케이스 별 O(2^n))
+<details>
+<summary style = "font-weight:bold"> 답안예시 2 (python -> 시간복잡도 각 테스트 케이스 별 O(2^n)) </summary>
+<div markdown="1">
 >백준 채점 시 시간 초과 발생
 
 ```python
@@ -501,3 +540,5 @@ for tc in range(t) :
 	cnt = fibonacci(n, [0, 0])
 	print(cnt[0], cnt[1])
 ```
+</div>
+</details>
