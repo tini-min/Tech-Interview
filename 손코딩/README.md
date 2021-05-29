@@ -8,9 +8,9 @@
 
 <details>
 <summary style = "font-weight:bold"> 답안예시 (python) </summary>
-<div markdown="1">
-```python
+<pre><code class = 'python'>
 class Stack :
+
 	def __init__(self) :
 		self.container = []
 		self.min_cont = []
@@ -43,8 +43,7 @@ class Stack :
 	def min(self) :
 		if len(self.container) == 0 : return None
 		return self.min_cont[-1]
-```
-</div>
+</code></pre>
 </details>
 
 ## 나선
@@ -66,8 +65,7 @@ N과 M이 주어졌을 때, 남서쪽 모서리는 (0,0) 남동쪽 모서리는 
 
 <details>
 <summary style = "font-weight:bold"> 답안예시 1 (python -> 구현) </summary>
-<div markdown="1">
-```python
+<pre><code class = 'python'>
 x, y = map(int, input().split())
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
@@ -79,14 +77,12 @@ while x != 0 and y != 0 :
 	rotate += 1
 	x -= 1 * abs(dx[rotate % 4]); y -= 1 * abs(dy[rotate % 4]);
 print(now[0], now[1])
-```
-</div>
+</code></pre>
 </details>
 
 <details>
 <summary style = "font-weight:bold"> 답안예시 2 (python -> 수학) </summary>
-<div markdown="1">
-```python
+<pre><code class = 'python'>
 w, h = map(int, input().split())
 short = min(w, h)
 x = y = 0
@@ -100,8 +96,7 @@ else:
     x = cycle - 1
     y = cycle
 print(x, y)
-```
-</div>
+</code></pre>
 </details>
 
 ## 달팽이
