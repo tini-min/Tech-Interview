@@ -5,10 +5,12 @@
 > <br>:star: Star나 RP를 통한 많은 관심 부탁드립니다.
 
 **:book: Contents**
+1. [Computer Architecture](/ComputerArchitecture/)
 1. [Data Structure](/DataStructure/)
-1. [Network](/Network/)
 1. [Operating System](/OS/)
 1. [Database](/DB/)
+1. [Network](/Network/)
+1. [Software Engineering](/SoftwareEngineering/)
 1. [Algorithm](/Algorithm/)
 
 ---
