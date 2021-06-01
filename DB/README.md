@@ -134,11 +134,18 @@ Statement에는 보통 변수를 설정하고 바인딩하는 static sql이 사�
 
 ## ETC
 
-한정적인 시간 가운데 선택적으로 공부하지 않은 내용입니다. > 시간적 여유가 있을 때 보충예정
+<details>
+ <summary><strong style = "font-size : 120%;">한정적인 시간 가운데 선택적으로 공부하지 않은 내용입니다.</strong></summary>
+ <div markdown = "1">
 
-[Connection Pool](https://delf-lee.github.io/post/connection-pool/)
-[ANSI/SPARC Architecture](https://neokido.tistory.com/entry/데이터베이스-ANSISPARC-Architecture) → 데이터베이스 구조 정의
-[CAP이론 1](https://ohjongsung.io/2019/05/01/cap-이론과-pacelc-이론)
-[CAP이론 2](http://happinessoncode.com/2017/07/29/cap-theorem-and-pacelc-theorem/)
-[CAP이론 3](https://sabarada.tistory.com/91)
-[전반적인 내용](https://github.com/WeareSoft/tech-interview/blob/master/contents/db.md)
+>시간적 여유가 있을 때 보충예정
+
+- [Connection Pool](https://delf-lee.github.io/post/connection-pool/)
+- [ANSI/SPARC Architecture](https://neokido.tistory.com/entry/데이터베이스-ANSISPARC-Architecture) → 데이터베이스 구조 정의
+- [CAP이론 1](https://ohjongsung.io/2019/05/01/cap-이론과-pacelc-이론)
+- [CAP이론 2](http://happinessoncode.com/2017/07/29/cap-theorem-and-pacelc-theorem/)
+- [CAP이론 3](https://sabarada.tistory.com/91)
+- [전반적인 내용](https://github.com/WeareSoft/tech-interview/blob/master/contents/db.md)
+
+</div>
+</details>
