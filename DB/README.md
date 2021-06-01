@@ -1,5 +1,5 @@
 # DB
-<details>
+<details markdown = "1">
  <summary>0. 용어 정리 (기초용어)</summary>
 - 릴레이션 : 유일한 값을 가지고, 중복되지 않은 튜플을 가진 테이블
 - 컬럼 = 필드 = 속성
