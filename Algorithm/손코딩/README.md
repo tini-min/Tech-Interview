@@ -47,7 +47,7 @@ class Stack :
 ```
 
 </div>
-</details><br>
+</details>
 
 ## 나선
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1491)
@@ -85,11 +85,12 @@ print(now[0], now[1])
 ```
 
 </div>
-</details><br>
+</details>
 
 <details>
  <summary><strong style = "font-size : 120%;">답안예시 2 (python -> 수학)</strong></summary>
  <div markdown = "1">
+<br>
 
 ```python
 w, h = map(int, input().split())
@@ -108,7 +109,7 @@ print(x, y)
 ```
 
 </div>
-</details><br>
+</details>
 
 ## 달팽이
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1913)
