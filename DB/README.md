@@ -1,6 +1,6 @@
 # DB
 <details>
- <summary><h3>0. 용어 정리 (기초용어)</h3></summary>
+ <summary><h3 style = "display : inline;">0. 용어 정리 (기초용어)</h3></summary>
  <div markdown = "1">
 
 - 릴레이션 : 유일한 값을 가지고, 중복되지 않은 튜플을 가진 테이블
