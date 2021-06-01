@@ -1,9 +1,13 @@
 # DB
-<details markdown = "1">
+<details>
  <summary>0. 용어 정리 (기초용어)</summary>
+ <div markdown = "1">
+
 - 릴레이션 : 유일한 값을 가지고, 중복되지 않은 튜플을 가진 테이블
 - 컬럼 = 필드 = 속성
 - 로우 = 레코드 = 튜플
+
+</div>
 </details>
 
 ## 1. 데이터베이스의 정의는 무엇인가요?
