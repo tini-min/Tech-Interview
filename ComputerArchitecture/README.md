@@ -1,4 +1,12 @@
 # Computer Architecture
+<details>
+ <summary><strong style = "font-size : 120%;">0. 용어 정리 (기초용어)</strong></summary>
+ <div markdown = "1">
+
+- https://brunch.co.kr/@toughrogrammer/14
+
+</div>
+</details>
 
 ## 1. 하드웨어의 구성에 대해 설명해 주세요?
 
@@ -8,10 +16,10 @@
  <summary><strong>CPU, ALU, RAM, ROM의 Full name</strong></summary>
  <div markdown = "1">
 
-- CPU : Central Proccecing Unit
-- ALU : Arithmetic Logic Unit
-- RAM : Random Access Memory
-- ROM : Read Only Memory
+- **CPU** : Central Proccecing Unit
+- **ALU** : Arithmetic Logic Unit
+- **RAM** : Random Access Memory
+- **ROM** : Read Only Memory
 
  </div>
 </details>
@@ -75,7 +83,7 @@ T0 : PC ← IR(addr)<br>
 
 https://blog.naver.com/jaeyoon_95/221053588562
 
-2-3. 간접 사이클과 인터럽트 사이클에 의한 명령어 처리과정은?
+### 2-3. 간접 사이클과 인터럽트 사이클에 의한 명령어 처리과정에 대해 설명해 주세요.
 
 > 간접 사이클 
 
@@ -93,15 +101,32 @@ T0 : MBR ← PC<br>
 T1 : MAR ← SP(Stack Pointer), PC ← ISR(Interrupt Service Routine)의 시작 주소<br>
 T2 : M[MAR] ← MBR, SP ← SP-1<br>
 
-## 3. 캐시 메모리란?
+### 2-4. 파이프라이닝이 무엇인가요?
+
+CPU의 속도를 향상시키기 위한 방법 중의 하나로, 명령어를 실행하는 데 사용되는 하드웨어를 여러 개의 독립적인 단계들로 분할하여 서로 다른 명령어들을 동시에 처리하는 기술입니다. 처리 속도가 크게 향상되지만 일명 파이프라인 해저드라고 하는 지연현상이 발생할 수 있습니다.
+
+#### 2-4-1. 파이프라인 해저드가 무엇인가요?
+
+파이프라인의 진행을 지연, 중지해야 하는 상황을 유발하는 원인입니다. 크게 구조적, 데이터, 제어 해저드가 있습니다. 구조적 해저드는 동일 자원에 대해 2개 이상의 명령어가 동시에 접근하는 문제이며, 데이터 해저드는 한 명령어의 결과가 바로 다음 명령어에서 사용해야 하는 상황이지만 결과가 아직 산출되기 전이라 해당 값을 사용할 수 없는 문제입니다. 마지막으로 제어 해저드는 Branch, Jump 혹은 Call/Return 과 같이 상황에 따라 다음 명령어가 바뀌어 다음에 처리해야 하는 명령어를 판단하기 어려운 문제입니다.
+
+##### 참고자료
+
+- https://jesus-never-fail.tistory.com/13
+- https://talkingaboutme.tistory.com/477
+
+#### 2-4-2. 파이프라인 해저드를 해결하기 위한 방안은 무엇인가요?
+
+구조적 해저드의 해결책은 ALU의 갯수를 늘리거나 메모리를 명령어 영역과 데이터 영역으로 분리해서 사용하는 방법입니다. 데이터 해저드의 경우 이전 명령어의 결과가 나올 때 까지 다음 명령어의 실행을 미루거나, 해당 결과값과 관련이 없는 명령어나 NOP을 해당 명령어 사이에 수행시켜서 다음 명령어의 순서를 미루어 대기 없이 결과값을 받을 수도 있습니다. 혹은 해당 결과를 쓰기 전에 이미 실행된 결과를 MUX를 추가하여 전달(Forwarding)하는 것입니다. 마지막으로 제어 해저드는 (생략 //보충필요)
+
+## 3. 캐시 메모리는 무엇인가요?
 
 속도가 빠른 장치와 느린 장치의 속도 차에 따른 병목 현상을 줄이기 위한 메모리 입니다. CPU가 주기억장치에서 저장된 데이터를 읽어올 때, 자주 사용하는 데이터를 캐시 메모리에 저장 후 읽어오면 속도가 상승됩니다.
 
-### 3-1. 캐시 메모리의 작동 원리는?
+### 3-1. 캐시 메모리의 작동 원리에 대해 설명해 주세요.
 
 캐시 메모리는 데이터 지역성의 원리를 이용합니다.  데이터 지역성은 시간 지역성과 공간 지역성 등이 있습니다. 시간 지역성은 for문이나 while문에서 사용하는 조건 변수와 같이 한 번 참조된 데이터는 잠시 후 다시 참조될 가능성이 높다는 것이고, 공간 지역성은 A[0], A[1]과 같은 연속 접근 시, 참조된 데이터 근처에 있는 데이터가 잠시 후 다시 사용될 가능성이 높음을 의미합니다.
 
-### 3-2. Cache Miss 3가지에 대해 설명하시오.
+### 3-2. Cache Miss의 종류 3가지에 대해 설명해 주세요.
 
 캐시 미스는 Cold Miss, Conflict Miss, Capacity Miss가 있으며, 각각 해당 메모리 주소를 처음 불러서 발생하는 미스, 캐시 메모리에 A와 B 데이터를 저장해야 하는데, A와 B가 같은 캐시 메모리 주소에 할당되어 있어서 나는 미스, 아니면 아예 캐시 메모리의 공간이 부족해서 발생하는 미스를 뜻합니다.
 
@@ -116,7 +141,7 @@ T2 : M[MAR] ← MBR, SP ← SP-1<br>
 - https://blog.naver.com/ggggamang/221113176831
 - https://dreamlog.tistory.com/578
 
-## 5. ARM 프로세서란 무엇인가?
+## 5. ARM 프로세서는 무엇인가요?
 
 ARM은 Advanced RISC Machine의 약자로 진보된 RISC 기기입니다. 이중 RISC란 Reduced Instruction Set Computing로서, 단순한 명령 집합을 가진 프로세서가 복잡한 명령 집합을 가진 프로세서보다 훨씬 더 효율적일 것이란 것을 전제한 개념입니다.<br>
 단순한 명령 집합과 구조를 가졌기에 프로세서가 작고, 상대적으로 느리지만 효율적입니다. 또한 단순한 명령 집합이 적은 수의 트랜지스터로 이어지기에 다이의 크기를 축소시킬 수 있습니다. 나아가 개별 반도체 제조사 별로 물리적 설계는 같지만 명령 집합이 다르기에 서로 다른 칩이 되기도 합니다. 하지만 하나의 ARM 기기에 작동하는 OS는 다른 ARM기반 기기에서도 잘 작동합니다. 이러한 장점 덕분에 수많은 버전의 OS 생성 및 호환이 가능합니다.
@@ -130,6 +155,8 @@ ARM은 Advanced RISC Machine의 약자로 진보된 RISC 기기입니다. 이중
 >시간적 여유가 있을 때 보충예정
 
 - 파이프라이닝
+- [컴퓨터에서 보수를 사용하는 이유](https://kjhweb.tistory.com/40)
+- [컴퓨터에서 보수를 사용하는 이유 2](https://blog.naver.com/jaeyoon_95/221061428046)
 
 </div>
 </details>
