@@ -43,6 +43,7 @@
 
 - https://gyoogle.dev/blog/computer-science/operating-system/IPC.html
 - https://jwprogramming.tistory.com/54
+- https://bluemoon-1st.tistory.com/22
 
 #### 2-3-1. IPC 종류와 특징에 대해 설명해 주세요.
 
