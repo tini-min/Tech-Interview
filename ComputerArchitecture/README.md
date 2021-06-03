@@ -51,25 +51,37 @@
  </div>
 </details>
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ### RAM에서 Random이 의미하는 바가 무엇인가요?
 
 RAM은 어느 위치에 저장된 데이터든지 읽기나 쓰기 등의 접근을 하는데 동일한 시간이 걸리는 메모리이기에 '랜덤'이라는 명칭이 부여되어 있습니다.
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
 
 ### SSD와 HDD의 차이점은?
 
 플래터에 데이터를 기록하는지 반도체 메모리에 데이터를 기록하는지에 따라서 나뉩니다. 기존 HDD의 경우 플레터에 데이터를 읽고 쓰고하는 방식이 물리적인 제약이 존재해 속도 면에서 떨어집니다. 반면 SSD는 가격은 비싸지만 속도도 빠르고 물리적 제약에서 벗어났기 때문에 발열이나 소음 등이 훨씬 덜 발생합니다.
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ### 시스템 버스는 무엇인가요?
 
 하드웨어의 구성요소를 물리적으로 연결하는 선입니다. 용도에 따라서 데이터 버스, 주소 버스, 제어 버스 등이 있습니다. 데이터 버스는 기억장치나 입출력 장치의 명령어와 데이터를 CPU로 보내거나 반대로 CPU에서 연산결과를 기억장치나 입출력 장치에 보내는 양방향 버스입니다. 주소 버스는 CPU가 주 기억장치나 입출력 장치로 주소를 전달하는 단방향 버스입니다. 마지막으로 제어 버스는 CPU, 기억장치, 입출력 장치에 제어 신호를 전달하는 양방향 통로입니다.
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
 
 ## CPU의 동작은 어떤 과정으로 이뤄지나요?
 
 주기억장치는 입력장치에서 입력받은 데이터 또는 보조기억장치에 저장된 프로그램 읽어온다 -> CPU는 프로그램을 실행하기 위해 주기억장치에 저장된 프로그램 명령어와 데이터를 읽어와 처리하고 결과를 다시 주기억장치에 저장한다 -> 주기억장치는 처리 결과를 보조기억장치에 저장하거나 출력장치로 보낸다 -> 제어장치는 1~3 과정에서 명령어가 순서대로 실행되도록 각 장치를 제어한다
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ### 명렁어 사이클이 무엇인가요?
 
 CPU가 주기억장치에서 한번에 하나의 명령어를 인출하여 실행하는데 필요한 일련의 활동입니다. 명령어 사이클은 인출/실행/간접/인터럽트 사이클로 나누어 집니다.
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
 
 ### 인출 사이클과 실행 사이클에 의한 명령어 처리과정에 대해 설명해 주세요.
 
@@ -110,6 +122,8 @@ T0 : PC ← IR(addr)<br>
 
 https://blog.naver.com/jaeyoon_95/221053588562
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ### 간접 사이클과 인터럽트 사이클에 의한 명령어 처리과정에 대해 설명해 주세요.
 
 > 간접 사이클 
@@ -128,9 +142,13 @@ T0 : MBR ← PC<br>
 T1 : MAR ← SP(Stack Pointer), PC ← ISR(Interrupt Service Routine)의 시작 주소<br>
 T2 : M[MAR] ← MBR, SP ← SP-1<br>
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ## 파이프라이닝이 무엇인가요?
 
 CPU의 속도를 향상시키기 위한 방법 중의 하나로, 명령어를 실행하는 데 사용되는 하드웨어를 여러 개의 독립적인 단계들로 분할하여 서로 다른 명령어들을 동시에 처리하는 기술입니다. 처리 속도가 크게 향상되지만 일명 파이프라인 해저드라고 하는 지연현상이 발생할 수 있습니다.
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
 
 ### 파이프라인 해저드가 무엇인가요?
 
@@ -141,25 +159,37 @@ CPU의 속도를 향상시키기 위한 방법 중의 하나로, 명령어를 �
 - https://jesus-never-fail.tistory.com/13
 - https://talkingaboutme.tistory.com/477
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ### 파이프라인 해저드를 해결하기 위한 방안은 무엇인가요?
 
 구조적 해저드의 해결책은 ALU의 갯수를 늘리거나 메모리를 명령어 영역과 데이터 영역으로 분리해서 사용하는 방법입니다. 데이터 해저드의 경우 이전 명령어의 결과가 나올 때 까지 다음 명령어의 실행을 미루거나, 해당 결과값과 관련이 없는 명령어나 NOP을 해당 명령어 사이에 수행시켜서 다음 명령어의 순서를 미루어 대기 없이 결과값을 받을 수도 있습니다. 혹은 해당 결과를 쓰기 전에 이미 실행된 결과를 MUX를 추가하여 전달(Forwarding)하는 것입니다. 마지막으로 제어 해저드는 (생략 //보충필요)
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
 
 ## 캐시 메모리는 무엇인가요?
 
 속도가 빠른 장치와 느린 장치의 속도 차에 따른 병목 현상을 줄이기 위한 메모리 입니다. CPU가 주기억장치에서 저장된 데이터를 읽어올 때, 자주 사용하는 데이터를 캐시 메모리에 저장 후 읽어오면 속도가 상승됩니다.
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ### 캐시 메모리의 작동 원리에 대해 설명해 주세요.
 
 캐시 메모리는 데이터 지역성의 원리를 이용합니다.  데이터 지역성은 시간 지역성과 공간 지역성 등이 있습니다. 시간 지역성은 for문이나 while문에서 사용하는 조건 변수와 같이 한 번 참조된 데이터는 잠시 후 다시 참조될 가능성이 높다는 것이고, 공간 지역성은 A[0], A[1]과 같은 연속 접근 시, 참조된 데이터 근처에 있는 데이터가 잠시 후 다시 사용될 가능성이 높음을 의미합니다.
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
 
 ### Cache Miss의 종류 3가지에 대해 설명해 주세요.
 
 캐시 미스는 Cold Miss, Conflict Miss, Capacity Miss가 있으며, 각각 해당 메모리 주소를 처음 불러서 발생하는 미스, 캐시 메모리에 A와 B 데이터를 저장해야 하는데, A와 B가 같은 캐시 메모리 주소에 할당되어 있어서 나는 미스, 아니면 아예 캐시 메모리의 공간이 부족해서 발생하는 미스를 뜻합니다.
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ### 캐시 메모리에서 사상이 무엇이고 사상 방식에 대해 설명해 주세요.
 
 주기억장치의 블록을 적재할 캐시의 위치를 지정하는 방법을 사상이라고 합니다. 대표적으로 직접 사상, 연관 사상, 집합 연관 사상이 있습니다. 직접 사상으로 구현된 캐시(Direct Mapped Cache)는 간단하고 빠르다는 장점이 있지만 같은 주소에 지정된 다른 데이터를 이용할 경우 Conflict Miss가 발생하는 것이 단점입니다. 이와는 정 반대로 비어있는 캐시가 있다면 마음대로 주소를 저장하는 방식의 Fully Associative Cache의 경우, 저장은 간편하지만 조건이나 규칙이 없기에 데이터를 검색하는 속도가 느립니다. 이 둘의 절충안으로 제시된 구조가 Set Associative Cache입니다. 특정 행을 지정하고 그 행 안의 어떤 열이든 비어있으면 저장하는 방식입니다.
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
 
 ## 해밍코드 생성 및 해석 해보기
 
@@ -168,15 +198,19 @@ CPU의 속도를 향상시키기 위한 방법 중의 하나로, 명령어를 �
 - https://blog.naver.com/ggggamang/221113176831
 - https://dreamlog.tistory.com/578
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ## ARM 프로세서는 무엇인가요?
 
 ARM은 Advanced RISC Machine의 약자로 진보된 RISC 기기입니다. 이중 RISC란 Reduced Instruction Set Computing로서, 단순한 명령 집합을 가진 프로세서가 복잡한 명령 집합을 가진 프로세서보다 훨씬 더 효율적일 것이란 것을 전제한 개념입니다.<br>
 단순한 명령 집합과 구조를 가졌기에 프로세서가 작고, 상대적으로 느리지만 효율적입니다. 또한 단순한 명령 집합이 적은 수의 트랜지스터로 이어지기에 다이의 크기를 축소시킬 수 있습니다. 나아가 개별 반도체 제조사 별로 물리적 설계는 같지만 명령 집합이 다르기에 서로 다른 칩이 되기도 합니다. 하지만 하나의 ARM 기기에 작동하는 OS는 다른 ARM기반 기기에서도 잘 작동합니다. 이러한 장점 덕분에 수많은 버전의 OS 생성 및 호환이 가능합니다.
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ## ETC
 
 <details>
- <summary><strong style = "font-size : 120%;">한정적인 시간 가운데 선택적으로 공부하지 않은 내용입니다.</strong></summary>
+ <summary><strong>한정적인 시간 가운데 선택적으로 공부하지 않은 내용입니다.</strong></summary>
  <div markdown = "1">
 
 >시간적 여유가 있을 때 보충예정

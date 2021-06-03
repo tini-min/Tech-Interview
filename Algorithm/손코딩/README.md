@@ -4,7 +4,7 @@
 > 대부분의 문제는 백준 브론즈~실버3 수준입니다.
 
 <details>
- <summary><strong>목차</strong></summary>
+ <summary><strong style = "font-size : 120%;">목차</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -43,7 +43,7 @@ X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub>에 좌표 압축을 적용한 �
 -10<sup>9</sup> ≤ X<sub>i</sub> ≤ 10<sup>9</sup><br>
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 (python)</strong></summary>
+ <summary><strong>답안예시 (python)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -60,6 +60,8 @@ for i in arr :
 
 </div>
 </details>
+
+**[뒤로](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm) / [위로](#손코딩-문제)**
 
 ## 나선
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1491)
@@ -79,7 +81,7 @@ N과 M이 주어졌을 때, 남서쪽 모서리는 (0,0) 남동쪽 모서리는 
 첫째 줄에 정답을 출력한다.<br>
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 1 (python -> 구현)</strong></summary>
+ <summary><strong>답안예시 1 (python -> 구현)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -101,7 +103,7 @@ print(now[0], now[1])
 </details>
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 2 (python -> 수학)</strong></summary>
+ <summary><strong>답안예시 2 (python -> 수학)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -123,6 +125,8 @@ print(x, y)
 
 </div>
 </details>
+
+**[뒤로](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm) / [위로](#손코딩-문제)**
 
 ## 달팽이
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1913)
@@ -154,7 +158,7 @@ print(x, y)
 N개의 줄에 걸쳐 표를 출력한다. 각 줄에 N개의 자연수를 한 칸씩 띄어서 출력하면 되며, 자릿수를 맞출 필요가 없다. N+1번째 줄에는 입력받은 자연수의 좌표를 나타내는 두 정수를 한 칸 띄어서 출력한다.
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 (python)</strong></summary>
+ <summary><strong>답안예시 (python)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -193,6 +197,8 @@ print(answer[0], answer[1])
 </div>
 </details>
 
+**[뒤로](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm) / [위로](#손코딩-문제)**
+
 ## 삼각형으로 자르기
 ### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1198)
 
@@ -209,7 +215,7 @@ print(answer[0], answer[1])
 첫째 줄에 문제의 정답을 출력한다. 절대/상대 오차는 10<sup>-9</sup>까지 허용한다.<br>
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 (python)</strong></summary>
+ <summary><strong>답안예시 (python)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -237,6 +243,8 @@ print(answer)
 
 </div>
 </details>
+
+**[뒤로](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm) / [위로](#손코딩-문제)**
 
 ## 피보나치 함수
 ### [문제 - Silver3](https://www.acmicpc.net/problem/1003)
@@ -277,7 +285,7 @@ fibonacci(3)은 fibonacci(2)와 fibonacci(1)의 결과를 얻고, 2를 리턴한
 각 테스트 케이스마다 0이 출력되는 횟수와 1이 출력되는 횟수를 공백으로 구분해서 출력한다.<br>
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 1 (python -> 시간복잡도 각 테스트 케이스별 O(n))</strong></summary>
+ <summary><strong>답안예시 1 (python -> 시간복잡도 각 테스트 케이스별 O(n))</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -298,7 +306,7 @@ for tc in range(t) :
 </details>
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 2 (python -> 시간복잡도 각 테스트 케이스 별 O(2^n))</strong></summary>
+ <summary><strong>답안예시 2 (python -> 시간복잡도 각 테스트 케이스 별 O(2^n))</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -327,6 +335,8 @@ for tc in range(t) :
 </div>
 </details>
 
+**[뒤로](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm) / [위로](#손코딩-문제)**
+
 ## 두 수의 합
 ### [문제 - 백준 Silver4](https://www.acmicpc.net/problem/3273)
 
@@ -338,7 +348,7 @@ n개의 서로 다른 양의 정수 a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</
 **출력**<br>
 문제의 조건을 만족하는 쌍의 개수를 출력한다.<br>
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 1 (python -> dictionary)</strong></summary>
+ <summary><strong>답안예시 1 (python -> dictionary)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -366,7 +376,7 @@ print(answer // 2)
 </details>
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 2 (python -> two pointer)</strong></summary>
+ <summary><strong>답안예시 2 (python -> two pointer)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -395,6 +405,8 @@ print(answer)
 </div>
 </details>
 
+**[뒤로](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm) / [위로](#손코딩-문제)**
+
 ## 최소공배수
 ### [문제 - 백준 Silver5](https://www.acmicpc.net/problem/1934)
 
@@ -409,7 +421,7 @@ print(answer)
 첫째 줄부터 T개의 줄에 A와 B의 최소공배수를 입력받은 순서대로 한 줄에 하나씩 출력한다.<br>
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 1 (python -> math 모듈)</strong></summary>
+ <summary><strong>답안예시 1 (python -> math 모듈)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -427,7 +439,7 @@ for tc in range(t) :
 </details>
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 2 (python -> 수학)</strong></summary>
+ <summary><strong>답안예시 2 (python -> 수학)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -448,11 +460,13 @@ for tc in range(t) :
 </div>
 </details>
 
+**[뒤로](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm) / [위로](#손코딩-문제)**
+
 ## Min_Stack 구현
 > 최솟값을 O(1) 연산으로 도출하는 Stack을 파이썬으로 구현
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 (python)</strong></summary>
+ <summary><strong>답안예시 (python)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -495,12 +509,14 @@ class Stack :
 </div>
 </details>
 
+**[뒤로](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm) / [위로](#손코딩-문제)**
+
 ## 정렬 알고리즘 작성
 
 시간복잡도가 최악인 경우 O(n log n)인 정렬 알고리즘을 작성하시오
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 1 (python : Merge Sort)</strong></summary>
+ <summary><strong>답안예시 1 (python : Merge Sort)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -533,7 +549,7 @@ def mergeSort(arr) :
 </details>
 
 <details>
- <summary><strong style = "font-size : 120%;">답안예시 2 (python : Heap Sort)</strong></summary>
+ <summary><strong>답안예시 2 (python : Heap Sort)</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -554,7 +570,7 @@ def heapSort(arr) :
 </details>
 
 <details>
- <summary><strong style = "font-size : 120%;">(보충) Heap 구현 → 모듈 사용 X</strong></summary>
+ <summary><strong>(보충) Heap 구현 → 모듈 사용 X</strong></summary>
  <div markdown = "1">
  <br>
 
@@ -607,3 +623,5 @@ def quickSort(arr) :
 
 </div>
 </details>
+
+**[뒤로](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm) / [위로](#손코딩-문제)**
