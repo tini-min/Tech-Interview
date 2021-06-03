@@ -3,8 +3,44 @@
 **개인적으로 기술 면접을 대비하면서 손코딩 문제 및 예상 답안입니다.**
 > 대부분의 문제는 백준 브론즈~실버3 수준입니다.
 
-## Min_Stack 구현
-> 최솟값을 O(1) 연산으로 도출하는 Stack을 파이썬으로 구현
+<details>
+ <summary><strong>목차</strong></summary>
+ <div markdown = "1">
+ <br>
+
+- [좌표 압축 - 백준 Silver2](#좌표-압축)
+- [나선 - 백준 Silver3](#나선)
+- [달팽이 - 백준 Silver3](#달팽이)
+- [삼각형으로 자르기 - 백준 Silver3](#삼각형으로-자르기)
+- [피보나치 함수 - Silver3](#피보나치-함수)
+- [두 수의 합 - 백준 Silver4](#두-수의-합)
+- [최소공배수 - 백준 Silver5](#최소공배수)
+- [Min_Stack 구현](#minstack-구현)
+- [정렬 알고리즘 작성](#정렬-알고리즘-작성)
+
+</div>
+</details>
+
+## 좌표 압축
+#### [문제 - 백준 Silver2](https://www.acmicpc.net/problem/18870)
+
+수직선 위에 N개의 좌표 X1, X2, ..., XN이 있다. 이 좌표에 좌표 압축을 적용하려고 한다.<br>
+
+X<sub>i</sub>를 좌표 압축한 결과 X'<sub>i</sub>의 값은 X<sub>i</sub> > X<sub>j</sub>를 만족하는 서로 다른 좌표의 개수와 같아야 한다.<br>
+
+X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub>에 좌표 압축을 적용한 결과 X'<sub>1</sub>, X'<sub>2</sub>, ..., X'<sub>N</sub>를 출력해보자.<br>
+
+**입력**<br>
+첫째 줄에 N이 주어진다.<br>
+
+둘째 줄에는 공백 한 칸으로 구분된 X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub>이 주어진다.<br>
+
+**출력**<br>
+첫째 줄에 X'<sub>1</sub>, X'<sub>2</sub>, ..., X'<sub>N</sub>을 공백 한 칸으로 구분해서 출력한다.<br>
+
+**제한**<br>
+1 ≤ N ≤ 1,000,000<br>
+-10<sup>9</sup> ≤ X<sub>i</sub> ≤ 10<sup>9</sup><br>
 
 <details>
  <summary><strong style = "font-size : 120%;">답안예시 (python)</strong></summary>
@@ -12,39 +48,14 @@
  <br>
 
 ```python
-class Stack :
-	def __init__(self) :
-		self.container = []
-		self.min_cont = []
+from bisect import bisect_left
 
-	def push(self, elem) :
-		self.container.append(elem)
+n = int(input())
+arr = list(map(int, input().split()))
 
-		if not self.min_cont : self.min_cont.append(elem)
-		else :
-			if self.min_cont[-1] >= elem : self.min_cont.append(elem)
-
-	def pop(self) :
-		if len(self.container) == 0 : return None
-
-		top = self.container.pop()
-		if self.min_cont[-1] == top : self.min_cont.pop()
-
-		return top
-
-	def size(self) :
-		return len(self.container)
-
-	def empty(self) :
-		return int(not self.container)
-
-	def top(self) :
-		if self.size() == 0 : return None
-		return self.container[-1]
-
-	def min(self) :
-		if len(self.container) == 0 : return None
-		return self.min_cont[-1]
+sorted_arr = sorted(list(set(arr)))
+for i in arr :
+	print(bisect_left(sorted_arr, i), end = ' ')
 ```
 
 </div>
@@ -182,6 +193,140 @@ print(answer[0], answer[1])
 </div>
 </details>
 
+## 삼각형으로 자르기
+### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1198)
+
+볼록 다각형이 있고, 3개의 연속된 점을 선택해서 삼각형을 만든다. 그 다음이 만든 삼각형을 다각형에서 제외한다. 원래 다각형이 N개의 점이 있었다면, 이제 N-1개의 점으로 구성된 볼록 다각형이 된다.<br>
+
+위의 과정은 남은 다각형이 삼각형이 될 때까지 반복한다.<br>
+
+볼록 다각형의 점이 시계 방향순으로 주어진다. 마지막에 남은 삼각형은 여러 가지가 있을 수 있다. 이때, 가능한 넓이의 최댓값을 구하는 프로그램을 작성하시오.<br>
+
+**입력**<br>
+첫째 줄에 볼록 다각형 점의 수 N (3 ≤ N ≤ 35)이 주어진다. 둘째 줄부터 N개의 줄에는 점이 시계 방향 순서대로 주어진다. 좌표는 10,000보다 작거나 같은 자연수이다.<br>
+
+**출력**<br>
+첫째 줄에 문제의 정답을 출력한다. 절대/상대 오차는 10<sup>-9</sup>까지 허용한다.<br>
+
+<details>
+ <summary><strong style = "font-size : 120%;">답안예시 (python)</strong></summary>
+ <div markdown = "1">
+ <br>
+
+```python
+from itertools import combinations
+
+n = int(input())
+points = []
+answer = 0
+
+for _ in range(n) :
+	a, b = map(int, input().split())
+	points.append((a, b))
+
+for tri in combinations(points, 3) :
+	surf = 0
+	for i in range(3) :
+		surf += tri[i][0] * tri[(i + 1) % 3][1]
+		surf -= tri[i][1] * tri[(i + 1) % 3][0]
+
+	answer = max(answer, abs(surf) / 2)
+
+print(answer)
+```
+
+</div>
+</details>
+
+## 피보나치 함수
+### [문제 - Silver3](https://www.acmicpc.net/problem/1003)
+
+다음 소스는 N번째 피보나치 수를 구하는 C++ 함수이다.<br>
+
+```cpp
+int fibonacci(int n) {
+    if (n == 0) {
+        printf("0");
+        return 0;
+    } else if (n == 1) {
+        printf("1");
+        return 1;
+    } else {
+        return fibonacci(n‐1) + fibonacci(n‐2);
+    }
+}
+```
+
+fibonacci(3)을 호출하면 다음과 같은 일이 일어난다.<br>
+
+fibonacci(3)은 fibonacci(2)와 fibonacci(1) (첫 번째 호출)을 호출한다.<br>
+fibonacci(2)는 fibonacci(1) (두 번째 호출)과 fibonacci(0)을 호출한다.<br>
+두 번째 호출한 fibonacci(1)은 1을 출력하고 1을 리턴한다.<br>
+fibonacci(0)은 0을 출력하고, 0을 리턴한다.<br>
+fibonacci(2)는 fibonacci(1)과 fibonacci(0)의 결과를 얻고, 1을 리턴한다.<br>
+첫 번째 호출한 fibonacci(1)은 1을 출력하고, 1을 리턴한다.<br>
+fibonacci(3)은 fibonacci(2)와 fibonacci(1)의 결과를 얻고, 2를 리턴한다.<br>
+1은 2번 출력되고, 0은 1번 출력된다. N이 주어졌을 때, fibonacci(N)을 호출했을 때, 0과 1이 각각 몇 번 출력되는지 구하는 프로그램을 작성하시오.<br>
+
+**입력**<br>
+첫째 줄에 테스트 케이스의 개수 T가 주어진다.<br>
+
+각 테스트 케이스는 한 줄로 이루어져 있고, N이 주어진다. N은 40보다 작거나 같은 자연수 또는 0이다.<br>
+
+**출력**<br>
+각 테스트 케이스마다 0이 출력되는 횟수와 1이 출력되는 횟수를 공백으로 구분해서 출력한다.<br>
+
+<details>
+ <summary><strong style = "font-size : 120%;">답안예시 1 (python -> 시간복잡도 각 테스트 케이스별 O(n))</strong></summary>
+ <div markdown = "1">
+ <br>
+
+```python
+t = int(input())
+d = [[0, 0] for _ in range(41)]
+d[0] = [1, 0]; d[1] = [0, 1];
+for i in range(2, 41) :
+	d[i][0] = d[i - 1][0] + d[i - 2][0]
+	d[i][1] = d[i - 1][1] + d[i - 2][1]
+
+for tc in range(t) :
+	n = int(input())
+	print(d[n][0], d[n][1])
+```
+
+</div>
+</details>
+
+<details>
+ <summary><strong style = "font-size : 120%;">답안예시 2 (python -> 시간복잡도 각 테스트 케이스 별 O(2^n))</strong></summary>
+ <div markdown = "1">
+ <br>
+
+>백준 채점 시 시간 초과 발생
+
+```python
+def fibonacci(n, cnt) :
+	if n == 0 :
+		cnt[0] += 1
+		return cnt
+	if n == 1 : 
+		cnt[1] += 1
+		return cnt
+	else : 
+		prev, pprev = fibonacci(n - 1, cnt), fibonacci(n - 2, cnt)
+		cnt[0] += prev[0] + pprev[0]; cnt[1] += prev[1] + pprev[1];
+		return cnt
+
+t = int(input())
+for tc in range(t) :
+	n = int(input())
+	cnt = fibonacci(n, [0, 0])
+	print(cnt[0], cnt[1])
+```
+
+</div>
+</details>
+
 ## 두 수의 합
 ### [문제 - 백준 Silver4](https://www.acmicpc.net/problem/3273)
 
@@ -250,20 +395,61 @@ print(answer)
 </div>
 </details>
 
-## 삼각형으로 자르기
-### [문제 - 백준 Silver3](https://www.acmicpc.net/problem/1198)
+## 최소공배수
+### [문제 - 백준 Silver5](https://www.acmicpc.net/problem/1934)
 
-볼록 다각형이 있고, 3개의 연속된 점을 선택해서 삼각형을 만든다. 그 다음이 만든 삼각형을 다각형에서 제외한다. 원래 다각형이 N개의 점이 있었다면, 이제 N-1개의 점으로 구성된 볼록 다각형이 된다.<br>
+두 자연수 A와 B에 대해서, A의 배수이면서 B의 배수인 자연수를 A와 B의 공배수라고 한다. 이런 공배수 중에서 가장 작은 수를 최소공배수라고 한다. 예를 들어, 6과 15의 공배수는 30, 60, 90등이 있으며, 최소 공배수는 30이다.<br>
 
-위의 과정은 남은 다각형이 삼각형이 될 때까지 반복한다.<br>
-
-볼록 다각형의 점이 시계 방향순으로 주어진다. 마지막에 남은 삼각형은 여러 가지가 있을 수 있다. 이때, 가능한 넓이의 최댓값을 구하는 프로그램을 작성하시오.<br>
+두 자연수 A와 B가 주어졌을 때, A와 B의 최소공배수를 구하는 프로그램을 작성하시오.<br>
 
 **입력**<br>
-첫째 줄에 볼록 다각형 점의 수 N (3 ≤ N ≤ 35)이 주어진다. 둘째 줄부터 N개의 줄에는 점이 시계 방향 순서대로 주어진다. 좌표는 10,000보다 작거나 같은 자연수이다.<br>
+첫째 줄에 테스트 케이스의 개수 T(1 ≤ T ≤ 1,000)가 주어진다. 둘째 줄부터 T개의 줄에 걸쳐서 A와 B가 주어진다. (1 ≤ A, B ≤ 45,000)<br>
 
 **출력**<br>
-첫째 줄에 문제의 정답을 출력한다. 절대/상대 오차는 10<sup>-9</sup>까지 허용한다.<br>
+첫째 줄부터 T개의 줄에 A와 B의 최소공배수를 입력받은 순서대로 한 줄에 하나씩 출력한다.<br>
+
+<details>
+ <summary><strong style = "font-size : 120%;">답안예시 1 (python -> math 모듈)</strong></summary>
+ <div markdown = "1">
+ <br>
+
+```python
+import math
+
+t = int(input())
+for tc in range(t) :
+	x, y = map(int, input().split())
+	gcd = math.gcd(x, y)
+	print(x * (y // gcd))
+```
+
+</div>
+</details>
+
+<details>
+ <summary><strong style = "font-size : 120%;">답안예시 2 (python -> 수학)</strong></summary>
+ <div markdown = "1">
+ <br>
+
+```python
+t = int(input())
+for tc in range(t) :
+	x, y = map(int, input().split())
+	x, y = (x, y) if x >= y else (y, x)
+
+	arr = [x, y]
+	while arr[-2] % arr[-1] != 0 :
+		arr.append(arr[-2] % arr[-1])
+
+	gcd = arr[-1]
+	print(x * (y // gcd))
+```
+
+</div>
+</details>
+
+## Min_Stack 구현
+> 최솟값을 O(1) 연산으로 도출하는 Stack을 파이썬으로 구현
 
 <details>
  <summary><strong style = "font-size : 120%;">답안예시 (python)</strong></summary>
@@ -271,25 +457,39 @@ print(answer)
  <br>
 
 ```python
-from itertools import combinations
+class Stack :
+	def __init__(self) :
+		self.container = []
+		self.min_cont = []
 
-n = int(input())
-points = []
-answer = 0
+	def push(self, elem) :
+		self.container.append(elem)
 
-for _ in range(n) :
-	a, b = map(int, input().split())
-	points.append((a, b))
+		if not self.min_cont : self.min_cont.append(elem)
+		else :
+			if self.min_cont[-1] >= elem : self.min_cont.append(elem)
 
-for tri in combinations(points, 3) :
-	surf = 0
-	for i in range(3) :
-		surf += tri[i][0] * tri[(i + 1) % 3][1]
-		surf -= tri[i][1] * tri[(i + 1) % 3][0]
+	def pop(self) :
+		if len(self.container) == 0 : return None
 
-	answer = max(answer, abs(surf) / 2)
+		top = self.container.pop()
+		if self.min_cont[-1] == top : self.min_cont.pop()
 
-print(answer)
+		return top
+
+	def size(self) :
+		return len(self.container)
+
+	def empty(self) :
+		return int(not self.container)
+
+	def top(self) :
+		if self.size() == 0 : return None
+		return self.container[-1]
+
+	def min(self) :
+		if len(self.container) == 0 : return None
+		return self.min_cont[-1]
 ```
 
 </div>
@@ -403,188 +603,6 @@ def quickSort(arr) :
 	right_side = [x for x in tail if x > pivot]
 
 	return quickSort(left_side) + [pivot] + quickSort(right_side)
-```
-
-</div>
-</details>
-
-### 좌표 압축
-#### [문제 - 백준 Silver2](https://www.acmicpc.net/problem/18870)
-
-수직선 위에 N개의 좌표 X1, X2, ..., XN이 있다. 이 좌표에 좌표 압축을 적용하려고 한다.<br>
-
-X<sub>i</sub>를 좌표 압축한 결과 X'<sub>i</sub>의 값은 X<sub>i</sub> > X<sub>j</sub>를 만족하는 서로 다른 좌표의 개수와 같아야 한다.<br>
-
-X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub>에 좌표 압축을 적용한 결과 X'<sub>1</sub>, X'<sub>2</sub>, ..., X'<sub>N</sub>를 출력해보자.<br>
-
-**입력**<br>
-첫째 줄에 N이 주어진다.<br>
-
-둘째 줄에는 공백 한 칸으로 구분된 X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub>이 주어진다.<br>
-
-**출력**<br>
-첫째 줄에 X'<sub>1</sub>, X'<sub>2</sub>, ..., X'<sub>N</sub>을 공백 한 칸으로 구분해서 출력한다.<br>
-
-**제한**<br>
-1 ≤ N ≤ 1,000,000<br>
--10<sup>9</sup> ≤ X<sub>i</sub> ≤ 10<sup>9</sup><br>
-
-<details>
- <summary><strong style = "font-size : 120%;">답안예시 (python)</strong></summary>
- <div markdown = "1">
- <br>
-
-```python
-from bisect import bisect_left
-
-n = int(input())
-arr = list(map(int, input().split()))
-
-sorted_arr = sorted(list(set(arr)))
-for i in arr :
-	print(bisect_left(sorted_arr, i), end = ' ')
-```
-
-</div>
-</details>
-
-## 최소공배수
-### [문제 - 백준 Silver5](https://www.acmicpc.net/problem/1934)
-
-두 자연수 A와 B에 대해서, A의 배수이면서 B의 배수인 자연수를 A와 B의 공배수라고 한다. 이런 공배수 중에서 가장 작은 수를 최소공배수라고 한다. 예를 들어, 6과 15의 공배수는 30, 60, 90등이 있으며, 최소 공배수는 30이다.<br>
-
-두 자연수 A와 B가 주어졌을 때, A와 B의 최소공배수를 구하는 프로그램을 작성하시오.<br>
-
-**입력**<br>
-첫째 줄에 테스트 케이스의 개수 T(1 ≤ T ≤ 1,000)가 주어진다. 둘째 줄부터 T개의 줄에 걸쳐서 A와 B가 주어진다. (1 ≤ A, B ≤ 45,000)<br>
-
-**출력**<br>
-첫째 줄부터 T개의 줄에 A와 B의 최소공배수를 입력받은 순서대로 한 줄에 하나씩 출력한다.<br>
-
-<details>
- <summary><strong style = "font-size : 120%;">답안예시 1 (python -> math 모듈)</strong></summary>
- <div markdown = "1">
- <br>
-
-```python
-import math
-
-t = int(input())
-for tc in range(t) :
-	x, y = map(int, input().split())
-	gcd = math.gcd(x, y)
-	print(x * (y // gcd))
-```
-
-</div>
-</details>
-
-<details>
- <summary><strong style = "font-size : 120%;">답안예시 2 (python -> 수학)</strong></summary>
- <div markdown = "1">
- <br>
-
-```python
-t = int(input())
-for tc in range(t) :
-	x, y = map(int, input().split())
-	x, y = (x, y) if x >= y else (y, x)
-
-	arr = [x, y]
-	while arr[-2] % arr[-1] != 0 :
-		arr.append(arr[-2] % arr[-1])
-
-	gcd = arr[-1]
-	print(x * (y // gcd))
-```
-
-</div>
-</details>
-
-## 피보나치 함수
-### [문제 - Silver3](https://www.acmicpc.net/problem/1003)
-
-다음 소스는 N번째 피보나치 수를 구하는 C++ 함수이다.<br>
-
-```cpp
-int fibonacci(int n) {
-    if (n == 0) {
-        printf("0");
-        return 0;
-    } else if (n == 1) {
-        printf("1");
-        return 1;
-    } else {
-        return fibonacci(n‐1) + fibonacci(n‐2);
-    }
-}
-```
-
-fibonacci(3)을 호출하면 다음과 같은 일이 일어난다.<br>
-
-fibonacci(3)은 fibonacci(2)와 fibonacci(1) (첫 번째 호출)을 호출한다.<br>
-fibonacci(2)는 fibonacci(1) (두 번째 호출)과 fibonacci(0)을 호출한다.<br>
-두 번째 호출한 fibonacci(1)은 1을 출력하고 1을 리턴한다.<br>
-fibonacci(0)은 0을 출력하고, 0을 리턴한다.<br>
-fibonacci(2)는 fibonacci(1)과 fibonacci(0)의 결과를 얻고, 1을 리턴한다.<br>
-첫 번째 호출한 fibonacci(1)은 1을 출력하고, 1을 리턴한다.<br>
-fibonacci(3)은 fibonacci(2)와 fibonacci(1)의 결과를 얻고, 2를 리턴한다.<br>
-1은 2번 출력되고, 0은 1번 출력된다. N이 주어졌을 때, fibonacci(N)을 호출했을 때, 0과 1이 각각 몇 번 출력되는지 구하는 프로그램을 작성하시오.<br>
-
-**입력**<br>
-첫째 줄에 테스트 케이스의 개수 T가 주어진다.<br>
-
-각 테스트 케이스는 한 줄로 이루어져 있고, N이 주어진다. N은 40보다 작거나 같은 자연수 또는 0이다.<br>
-
-**출력**<br>
-각 테스트 케이스마다 0이 출력되는 횟수와 1이 출력되는 횟수를 공백으로 구분해서 출력한다.<br>
-
-<details>
- <summary><strong style = "font-size : 120%;">답안예시 1 (python -> 시간복잡도 각 테스트 케이스별 O(n))</strong></summary>
- <div markdown = "1">
- <br>
-
-```python
-t = int(input())
-d = [[0, 0] for _ in range(41)]
-d[0] = [1, 0]; d[1] = [0, 1];
-for i in range(2, 41) :
-	d[i][0] = d[i - 1][0] + d[i - 2][0]
-	d[i][1] = d[i - 1][1] + d[i - 2][1]
-
-for tc in range(t) :
-	n = int(input())
-	print(d[n][0], d[n][1])
-```
-
-</div>
-</details>
-
-<details>
- <summary><strong style = "font-size : 120%;">답안예시 2 (python -> 시간복잡도 각 테스트 케이스 별 O(2^n))</strong></summary>
- <div markdown = "1">
- <br>
-
->백준 채점 시 시간 초과 발생
-
-```python
-def fibonacci(n, cnt) :
-	if n == 0 :
-		cnt[0] += 1
-		return cnt
-	if n == 1 : 
-		cnt[1] += 1
-		return cnt
-	else : 
-		prev, pprev = fibonacci(n - 1, cnt), fibonacci(n - 2, cnt)
-		cnt[0] += prev[0] + pprev[0]; cnt[1] += prev[1] + pprev[1];
-		return cnt
-
-t = int(input())
-for tc in range(t) :
-	n = int(input())
-	cnt = fibonacci(n, [0, 0])
-	print(cnt[0], cnt[1])
 ```
 
 </div>
