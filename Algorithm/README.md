@@ -1,6 +1,6 @@
 # Algorithm
 
-### [손코딩 예상 문제 및 예제 답안](/손코딩/)
+### [손코딩 예상 문제 및 예제 답안](./손코딩/)
 
 <details>
  <summary><strong>목차</strong></summary>
