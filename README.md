@@ -159,7 +159,7 @@
     - [애자일(Agile)이 무엇인가요?](/SoftwareEngineering/#애자일agile이-무엇인가요)
         * [데브옵스가 무엇인가요?](/SoftwareEngineering/#데브옵스가-무엇인가요)
         * [스크럼이 무엇인가요?](/SoftwareEngineering/#스크럼이-무엇인가요)
-    -[객체지향 프로그래밍이 무엇인가요?](/SoftwareEngineering/#객체지향-프로그래밍이-무엇인가요)
+    - [객체지향 프로그래밍이 무엇인가요?](/SoftwareEngineering/#객체지향-프로그래밍이-무엇인가요)
         * [OOP의 특징은 무엇이 있나요?](/SoftwareEngineering/#OOP의-특징은-무엇이-있나요)
         * [객체 지향 설계 원칙에 대해 설명해 주세요.](/SoftwareEngineering/#객체-지향-설계-원칙에-대해-설명해-주세요)
     - [함수형 프로그램밍이 무엇입니까?](/SoftwareEngineering/#함수형-프로그램밍이-무엇입니까)
@@ -186,8 +186,6 @@
 
 1. [Algorithm](/Algorithm/)
 
-    [손코딩 예상 문제 및 예제 답안](/Algorithm/손코딩/)
-
     <details>
     <summary><strong>목차</strong></summary>
     <div>
@@ -202,9 +200,11 @@
     </div>
     </details>
 
+    [손코딩 예상 문제 및 예제 답안](/Algorithm/손코딩/)
+
 ---
 
 # Reference
 * [JaeYeopHan 님의 Interview_Question_for_Beginner](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
-* [Gyeseok Kim님의 Tech Interview for developer](https://gyoogle.dev/blog/)
-* [WeareSoft님의 tech-interview](https://github.com/WeareSoft/tech-interview)
+* [Gyeseok Kim 님의 Tech Interview for developer](https://gyoogle.dev/blog/)
+* [WeareSoft 님의 tech-interview](https://github.com/WeareSoft/tech-interview)
