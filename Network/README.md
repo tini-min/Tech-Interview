@@ -275,15 +275,15 @@ HTTP 통신은 클라이언트가 요청을 보내는 경우에만 서버가 응
 
 ![DNS 동작 방식](./img/DNS%20동작%20방식.png)
 
-1. 브라우저에 www.example.com을 입력
+1. 브라우저에 www.example.com 을 입력
 - **캐시 DNS의 www.example.com 캐시가 있을 때**<br>
-    2. 클라이언트가 www.example.com으로 요청 시, 클라이언트의 Resolver에 등록된 캐시 네임서버(DNS resolver)로 질의.<br>
-    7. 캐시 DNS(Resolver 네임서버)가 www.example.com에 대한 캐시가 있을 경우, 클라이언트에게 응답하여 종료<br>
+    2. 클라이언트가 www.example.com 으로 요청 시, 클라이언트의 Resolver에 등록된 캐시 네임서버(DNS resolver)로 질의.<br>
+    7. 캐시 DNS(Resolver 네임서버)가 www.example.com 에 대한 캐시가 있을 경우, 클라이언트에게 응답하여 종료<br>
 - **캐시 DNS의 www.example.com 캐시가 없을 때**<br>
-    2. 클라이언트가 www.example.com으로 요청 시, Client의 Resolver에 등록된 캐시 네임서버(DNS resolver)로 질의.<br>
-    3. 캐시 DNS(Resolver 네임서버)가 www.example.com에 대한 캐시가 없을 경우, root 네임서버로 .com 네임서버 질의하여 .com(TLD) 네임서버 주소를 받음.<br>
+    2. 클라이언트가 www.example.com 으로 요청 시, Client의 Resolver에 등록된 캐시 네임서버(DNS resolver)로 질의.<br>
+    3. 캐시 DNS(Resolver 네임서버)가 www.example.com 에 대한 캐시가 없을 경우, root 네임서버로 .com 네임서버 질의하여 .com(TLD) 네임서버 주소를 받음.<br>
     4. .com 네임서버에게 example.com 네임서버 주소 질의하여 example.com 네임서버 주소 받음<br>
-    5. example.com 네임서버에게 www.example.com에 대한 주소를 질의<br>
+    5. example.com 네임서버에게 www.example.com 에 대한 주소를 질의<br>
     6. www.example.com 네임서버가 자신의 www에 대한 A Record를 확인 후, IP 주소를 응답.<br>
     7. 캐시 DNS서버(Resolver)는 응답 받은 IP주소를 Client에게 전송.<br>
 8. Client는 응답받은 IP주소를 이용하여 www.example.com 서버로 요청<br>
