@@ -30,7 +30,7 @@
     * [캐시 메모리에서 사상이 무엇이고 사상 방식에 대해 설명해 주세요.](#캐시-메모리에서-사상이-무엇이고-사상-방식에-대해-설명해-주세요)
 - [해밍코드 생성 및 해석 해보기](#해밍코드-생성-및-해석-해보기)
 - [ARM 프로세서는 무엇인가요?](#arm-프로세서는-무엇인가요)
-- [ETC](#etc)
+    * [CISC와 RISC의 장단점은 무엇인가요?](#CISC와-RISC의-장단점은-무엇인가요)
 
 </div>
 </details>
@@ -207,6 +207,16 @@ ARM은 Advanced RISC Machine의 약자로 진보된 RISC 기기입니다. 이중
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
 
+### CISC와 RISC의 장단점은 무엇인가요?
+
+CISC는 Complex Instruction Set Computer의 약자로 말 그대로 복잡한 명령어로 구성된 집합을 사용하는 것입니다. 반면에, RISC는 Reduced Instruction Set Computer의 약자로 간단한 명령어 집합을 사용합니다. 따라서 나타나지는 장단점으로는, CISC는 컴파일러 작성이 용이하고, 효율이 좋습니다. 다만 하나의 명령어가 복잡하기에 디코딩이 오래 걸리고, 일부 명령어만 주로 쓰입니다. 또한 각 명령어의 길이가 다르기에 동시에 여려 명령어 처리는 어렵습니다. RISC는 복잡한 명령을 보유하고 있는 명령어를 조합하여 처리하기에 컴파일러의 최적화 과정이 복잡해지고, 명령어 길이가 고정되어 있어 코드 효율이 낮지만, 파이프라인의 성능이 최적화 되고, 디코딩 속도가 빠르며, 여러 명령어를 동시에 처리할 수 있는 장점이 있습니다.
+
+##### 참고자료
+
+- https://skagh.tistory.com/7
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#computer-architecture)**
+
 ## ETC
 
 <details>
@@ -215,7 +225,7 @@ ARM은 Advanced RISC Machine의 약자로 진보된 RISC 기기입니다. 이중
 
 >시간적 여유가 있을 때 보충예정
 
-- 파이프라이닝
+- 부동소수점 표현 방식 (ex. IEEE 754)
 - [컴퓨터에서 보수를 사용하는 이유](https://kjhweb.tistory.com/40)
 - [컴퓨터에서 보수를 사용하는 이유 2](https://blog.naver.com/jaeyoon_95/221061428046)
 
