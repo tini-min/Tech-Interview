@@ -1,4 +1,4 @@
-# 운영체제(OS)
+# OS
 
 <details>
  <summary><strong>목차</strong></summary>
@@ -10,6 +10,7 @@
 - [프로세스와 스레드는 무엇인가요?](#프로세스와-스레드는-무엇인가요)
     * [PCB는 무엇인가요?](#pcb는-무엇인가요)
     * [프로세스의 상태 전이를 설명해 주세요.](#프로세스의-상태-전이를-설명해-주세요)
+    * [커널 레벨 스레드와 유저 레벨 스레드가 무엇인가요?](#커널-레벨-스레드와-유저-레벨-스레드가-무엇인가요)
     * [IPC는 무엇인가요?](#ipc는-무엇인가요)
         + [IPC 종류와 특징에 대해 설명해 주세요.](#ipc-종류와-특징에-대해-설명해-주세요)
 - [멀티 스레드와 멀티 프로세스가 무엇이고, 각각의 장단점은 무엇인가요?](#멀티-스레드와-멀티-프로세스가-무엇이고-각각의-장단점은-무엇인가요)
@@ -55,7 +56,7 @@
 
 - https://gyoogle.dev/blog/computer-science/operating-system/Operation System.html
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 커널 모드와 사용자 모드는 무엇인가요?
 
@@ -65,25 +66,25 @@
 
 - https://blockdmask.tistory.com/69
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 시스템 콜은 무엇인가요?
 
 운영체제에서 프로그램이 구동되는데 있어 파일을 읽어 오거나, 파일을 쓰거나, 혹은 화면에 메시지를 출력하는 기능들은 커널 모드를 사용합니다. 시스템 콜은 이러한 커널 영역의 기능을 사용자 모드가 사용 가능하게, 즉 프로세스가 하드웨어에 직접 접근해서 필요한 기능을 사용할 수 있게 해줍니다. 프로세스 제어, 파일 조작, 장치 조작, 정보 유지보수, 통신과 보호 등이 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ## 프로세스와 스레드는 무엇인가요?
 
 프로세스는 메모리 상에 실행되고 있는 프로그램의 인스턴스이고, 스레드는 프로세스 안에서 실행되는 여러 흐름의 단위입니다. 가장 기본적인 차이는 프로세스는 자신만의 고유 공간과 지원을 할당받아 사용하는데 반해, 스레드는 다른 스레드와 공간과 자원을 공유하면서 사용합니다. 단, 스택과 PC 레지스터 값은 독립적으로 가지고 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### PCB는 무엇인가요?
 
 프로세스 제어 블록이란 특정 프로세스에 대한 중요한 정보를 저장하고 있는 운영체제의 자료구조입니다. 운영체제는 프로세스를 관리하기 위해 프로세스의 생성과 동시에 고유한 PCB를 생성합니다. 프로세스는 CPU를 할당받아 작업을 처리하다가도 프로세스 전환이 발생하면 진행하던 작업을 저장하고 CPU를 반환해야 하는데, 이 때 작업의 진행 상황을 모두 PCB에 저장하게 됩니다. 향후 CPU를 할당받게 되면 PCB에 저장되어 있던 내용을 불러와 이전에 종료됐던 시점부터 다시 작업을 수행하게 됩니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 프로세스의 상태 전이를 설명해 주세요.
 
@@ -95,7 +96,22 @@
 
 - http://blog.skby.net/프로세스-상태-전이/
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
+
+### 커널 레벨 스레드와 유저 레벨 스레드가 무엇인가요?
+
+![커널 레벨 스레드와 유저 레벨 스레드](./img/커널%20레벨%20스레드와%20유저%20레벨%20스레드.png)
+
+커널 레벨 스레드는 커널 레벨에서 생성되고 커널이 직접 관리하는 스레드입니다. 반면에, 유저 레벨 스레드는 스레드를 관리하는 라이브러리로 인해 유저 레벨에서 생성되고 관리되는 스레드입니다.<br>
+커널 레벨 스레드의 장접으로는 커널의 관리 지원을 받을 수 있기 때문에, 안정성과 다양한 기능이 제공됩니다. 또한, 각 스레드들을 개별적으로 관리할 수 있으므로, 동일한 프로세스에 할당된 여러 스레드 중 한 스레드가 대기상태가 되더라도, 다른 스레드에 영향을 미치지 않습니다. 하지만 유저 모드와 커널 모드의 교환이 잦아지면 그만큼 오버헤드가 늘어나는 단점이 있습니다. 유저 레벨 스레드의 장점으로는 스케줄링이나 동기화를 위해 커널을 호출하지 않기 때문에, 커널 모드로 전환하는 오버헤드가 줄어듭니다. 또한, 커널이 아닌 라이브러리에서 스레드 스케줄링을 제어하므로, 유연한 스케줄링이 가능합니다. 대신, 한 스레드가 블록킹 되면, 모든 스레드들을 실행시킬 수 없게 됩니다. 또한, 커널이 스레드 관리에 개입하지 않으므로, 커널의 보호 방법을 사용할 수 없습니다.
+
+##### 참고자료
+
+- https://helloinyong.tistory.com/293
+- https://www.crocus.co.kr/1255
+- https://junghyun100.github.io/사용자수준ThreadVS커널수준Thread/
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### IPC는 무엇인가요?
 
@@ -107,7 +123,7 @@
 - https://jwprogramming.tistory.com/54
 - https://bluemoon-1st.tistory.com/22
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 #### IPC 종류와 특징에 대해 설명해 주세요.
 
@@ -116,56 +132,56 @@
 - **공유 메모리** : 데이터 자체를 공유하도록 지원하는 설비입니다. 한 프로세스에서 스레드가 데이터를 공유하는 것과 같은 원리입니다.<br>
 - **메모리 맵** : 프로세스의 가상 메모리 주소 공간에 파일을 매핑한 뒤 가상 메모리 주소에 직접 접근하는 방식으로 운영됩니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ## 멀티 스레드와 멀티 프로세스가 무엇이고, 각각의 장단점은 무엇인가요?
 
 멀티 스레드는 하나의 프로세스에서 여러 스레드를 구성해 각 스레드가 하나의 작업을 처리하는 것입니다. 그에 반해 멀티 프로세스는 하나의 컴퓨터에 여러 CPU를 장착하여 하나 이상의 프로세스들을 동시에 처리하는 것입니다. 멀티 스레드는 공유메모리 덕분에 독립적인 프로세스에 비해 시간과 자원의 손실이 적고, 각 변수에 대한 자료 공유가 용이합니다. 대신 하나의 스레드가 데이터를 망가뜨리면 모든 스레드가 작동 불능 상태가 되는 안정성의 문제가 있습니다. 멀티 프로세스는 메모리 침범 문제를 OS차원에서 해결하기에 안전하지만 각각 독립된 메모리 영역을 가지고 있기에 작업량이 많을수록 오버헤드가 발생합니다. 또한 Context Switching으로 인한 성능 저하(캐시 메모리를 초기화하면서 발생)가 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 멀티 스레딩 시 스레드마다 스택과 PC를 독립적으로 할당하는 이유는 무엇인가요?
 
 스택은 함수 호출 시 전달되는 인자, 되돌아갈 주소값, 및 함수 내에서 선언하는 변수 등을 저장하기 위해 사용하는 메모리 공간입니다. 스택이 독립적인 경우 스레드가 독립적인 함수 호출이 가능하다는 것을 의미하기 때문에 스레드의 독립적인 실행 흐름을 추가하기 위해 독립된 스택을 할당합니다.<br>
 PC값을 통해 명령어가 어디까지 수행되었는 지를 확인할 수 있습니다. 스레드가 CPU를 할당받았다가 선점당할 경우, 명령어가 연속적으로 수행되지 못하므로 어디까지 명령어가 수행되었는지 기억할 필요가 있기에 PC 레지스터를 독립적으로 할당합니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### Thread-Safe란?
 
 멀티 스레드 환경에서 여러 스레드가 동시에 하나의 객체 및 변수에 접근할 때, 의도한 대로 동작하는 것을 말합니다. 이를 위해서는 임계영역을 동기화 기법으로 제어해줘야 합니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 #### Reentrant가 무엇인가요?
 
 동시에 접근해도 언제나 같은 실행 결과를 보장하는 성질입니다. 전역변수를 사용하거나 반환하면 안 되고 호출 시 제공된 매개변수만으로 동작하는 함수를 일컬어 Reentrant하다고 합니다. 이 경우 함수는 Thread-safe하다고 할 수 있습니다. (역은 성립 불가)
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### Context Switching이 무엇인가요?
 
 동작중인 Task가 대기하면서 해당 Task의 상태(Context)를 보관하고, 대기하고 있던 다음 순번의 Task가 동작하면서 이전에 보관했던 상태를 복구하는 과정을 말합니다. 그래서 프로세스 Context Switching이 발생할 경우 CPU는 캐시 메모리를 초기화하는 작업도 거치기에 오버헤드가 발생한다. 반면 스레드 Context Switching는 독립적인 영역만 변경하면 되기에 훨씬 비용이 적습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ## 경쟁 상태란 무엇인가요?
 
 경쟁 상태 또는 경쟁 조건(Race Condition)이란 두 개 이상의의 Task가 동시에 공유 자원에 접근할 때, Task의 접근 순서에 따라 결과 값이 달라질 수 있는 상황입니다. 이 상황에선 자료의 일관성이 침해될 수 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### Critical Section(임계영역)과 Critical Section Problem(임계영역 문제)가 무엇인가요?
 
 Critical Section(임계영역)이란 두 개 이상의의 Task가 자원을 공유하는 상황에서, 하나의 Task만 접근할 수 있도록 제한해둔 코드 영역입니다. 여기서 Critical Section Problem(임계영역 문제)란 코드 중 임계영역으로 설정되어야 하지만 설정되지 않았을 때 발생할 수 있는 문제입니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 동기화란 무엇인가요?
 
 경쟁 상태를 해결하는 것 즉, 데이터의 일관성을 유지하기 위해 Task들에게 하나의 자원에 대한 처리 권한을 주거나 순서를 조정하는 방법입니다. 이를 위한 기본 조건으로는 상호배제(Mutual Exclusion), 진행(Process), 한정된 대기(Bounded Waiting)가 필요하며 스핀락, 세마포, 뮤텍스, 모니터 등의 방식이 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 #### 동기화와 관련된 고전적인 문제들을 설명해 주세요.
 
@@ -198,7 +214,7 @@ Critical Section(임계영역)이란 두 개 이상의의 Task가 자원을 공�
 - https://rebas.kr/856
 - https://velog.io/@zehye/전통적-동기화-예제생산자-소비자문제-RW문제-식사하는-철학자-문제
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 #### 동기화를 제공하는 방식에 대해 설명해 주세요.
 
@@ -216,20 +232,20 @@ Critical Section(임계영역)이란 두 개 이상의의 Task가 자원을 공�
 ##### Monitor(모니터)
 Task 동기화를 위해 구현된 기능 또는 모듈들을 뜻합니다. 주로 고급 언어에서 지원되며 개발자의 코드를 상호배제 하게끔 만든 추상화된 데이터 형태입니다. 모니터에서 키의 획득, 해제를 모두 처리하기에 간단한 것이 장점입니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 #### 스핀락과 뮤텍스의 차이는 무엇인가요?
 
 뮤텍스는 다른 병렬적인 Task를 처리하기 위해 CPU를 처리할 수 있다는 것이며, 이를 위해 Context Switching을 하고 자원을 기다릴 수 있습니다. 다만 자원을 단시간에 얻을 수 있게 될 경우 Context Switching에 더 큰 자원을 소모할 수 있습니다.<br>
 이와 반대로 스핀락은 Busy Waiting의 문제가 발생하지만 단기간에 자원을 얻을 수 있다면 Context Switching비용이 들지 않으므로 효율을 높일 수 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 #### 뮤텍스와 세마포어의 차이는 무엇인가요?
 
 먼저 가질 수 있는 변수의 크기가 다릅니다. 또한 Locking 매커니즘을 사용하는 뮤텍스는 락을 획득한 프로세스가 반드시 그 락을 해제해야 하지만 Signaling 매커니즘을 하용하는 세마포어는 다른 프로세스가 Signal을 이용해 락을 해제할 수 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 교착상태에 대해 설명해 주세요.
 
@@ -238,19 +254,19 @@ Task 동기화를 위해 구현된 기능 또는 모듈들을 뜻합니다. 주�
 > 은행원 알고리즘이란?
 ><br>은행원이 돈이 필요한 모든 고객의 요구가 충족되도록 빌려줄 수 있고, 빌릴 수 있는 사람에게 현금을 할당하는데서 유래한 알고리즘 입니다. 프로세스가 자원을 요구할 때 시스템은 자원을 할당한 후에도 안정 상태로 남아 있게 되는지 사전에 검사하여 교착 상태를 회피하는 알고리즘입니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ## 인터럽트가 무엇인가요?
 
 프로그램 실행 도중 예기치 않은 상황이 발생할 경우 현재 실행중인 작업을 중단하고, 발생된 상황을 우선 처리 후 실행 중이던 작업으로 복귀하여 처리를 이어 나가는 것입니다. 크게 내/외부 인터럽트, 소프트웨어 인터럽트가 있고, 내/외부 인터럽트는 CPU의 하드웨어 신호에 의해 발생하며, 소프트웨어 인터럽트는 명령어의 수행에 의해 발생하는 것입니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 인터럽트 기능이 없으면 어떤 일이 발생하나요?
 
 이 경우 컨트롤러는 특정한 어떤 일을 할 시기를 알기 위해 주기적으로 체크(폴링-Polling)해야합니다. 폴링 시에는 원래 하던 일에 집중할 수가 없게 되어 많은 기능을 제대로 수행하지 못한다는 단점이 존재합니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ## 스케줄러란 무엇인가요?
 
@@ -265,13 +281,13 @@ Task 동기화를 위해 구현된 기능 또는 모듈들을 뜻합니다. 주�
 - https://jhnyang.tistory.com/372
 - https://girawhale.tistory.com/62
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 각 스케줄러의 기능은 무엇인가요?
 
 장기 스케줄러는 Job queue에서 Ready queue에 올릴 프로세스를 선별하는 스케줄러입니다. CPU bound process와 I/O bound process를 적절히 Ready queue에 올립니다. 단기 스케줄러는 Ready queue에서 어떤 프로세스를 먼저 running 할 지 결정하는 스케줄러입니다. 마지막으로 중기 스케줄러는 여유공간 마련을 위해 프로세스를 메모리에서 디스크로 쫓아내는 역활을 합니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 #### Swapping이 무엇인가요?
 
@@ -281,13 +297,13 @@ Task 동기화를 위해 구현된 기능 또는 모듈들을 뜻합니다. 주�
 
 - https://jhnyang.tistory.com/103?category=815411
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### CPU 스케줄러의 목표는 무엇인가요?
 
 CPU 스케줄링의 목표는 크게 Batch System, Interactive System, Real-time System이 있습니다. 가능하면 많은 일을 수행하고, 빠른 응답 시간과 적은 대기 시간을 추구하며, 기한에 맞춰 프로세스가 진행되어야 한다는 것입니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### CPU 스케줄러(단기 스케줄러)의 종류에 대해 설명해 주세요.
 
@@ -301,7 +317,7 @@ CPU 스케줄링의 목표는 크게 Batch System, Interactive System, Real-time
 - **Multilevel-Queue-Scheduling** : 단일한 Ready queue가 아닌 우선 순위마다 각각의 Ready queue를 만들어서 스케줄링하는 방식입니다. 각 큐는 RR에 의해 스케줄링 되고, 상위 큐를 비우면 하위 큐가 실행되는 방식입니다
 - **Multilevel-Feedback-Queue-Scheduling** : Multilevel-Queue-Scheduling를 강화한 형태로 큐와 큐 사이의 이동을 허용합니다. 따라서 낮은 우선 순위을 큐에서 프로세스가 너무 오랫동안 대기하고 있는 상태라면 한 단계 위의 우선 순위 큐로 올릴 수 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ## 동기와 비동기, Blocking과 Non-Blocking은 무엇인가요?
 
@@ -312,44 +328,44 @@ CPU 스케줄링의 목표는 크게 Batch System, Interactive System, Real-time
 - https://velog.io/@wonhee010/동기vs비동기-feat.-blocking-vs-non-blocking
 - https://youtu.be/IdpkfygWIMk
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ## 메모리 관리 기법에 대해서 설명해 주세요.
 
 다중 프로그래밍 시스템에 여러 프로세스를 수용하기 위해 한정된 메모리를 여러 프로세스가 함께 메모리를 사용하기에 효율적인 관리를 위한 여러 기법이 필요합니다. 크게 연속 메모리 관리와 불연속 메모리 관리가 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 연속 메모리 관리와 불연속 메모리 관리에 대해서 설명해 주세요.
 
 연속 메모리 관리는 프로그램 전체가 하나의 커다란 공간에 연속적으로 할당하는 기법입니다. 이 경우 메모리에 적재되고 제거되는 일이 반복되다 보면, 프로세스들이 사용하지 못하는 작은 자유 공간들이 늘어나게 되는 단편화 현상이 일어납니다. 고정적으로 메모리를 분할할 경우 내부 단편화가, 동적으로 분할할 경우 외부 단편화가 주로 일어납니다. 이를 해결하기 위해 압축이라는 기법이 존재하지만 작업효율이 좋지 않습니다.<br>
 이와 달리, 불연속 메모리 관리는 하나의 프로세스가 사용하는 메모리 공간이 연속적이어야 한다는 제약을 없애고 서로 다른 주소 공간에 할당하는 기법입니다. 대표적으로 페이징과 세그멘테이션이 있습니다. 페이징은 메모리를 고정된 크기를 가진 프레임으로 분리한 후 이에 맞추어 프로세스의 논리 메모리를 페이지라 불리는 고정크기의 블록으로 분리하여 각 프레임에 mapping하는 방법입니다. 외부단편화는 해결할 수 있지만 내부 단편화의 문제가 발생할 수 있습니다. 세그멘테이션은 물리 메모리를 같은 크기의 블록이 아닌, 서로 다른 크기의 논리적인 단위인 세그먼트로 분할하여 사용자가 세그먼트 번화와 변위를 지정하고, 세그멘트 테이블에 각 세그멘트의 기준과 한계를 저장합니다. 내부 단편화의 문제는 해결할 수 있지만 외부 단편화의 문제가 발생할 수 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ## 가상 메모리는 무엇인가요?
 
 다중 프로그래밍을 실현하기 위해 많은 프로세스들을 동시에 메모리에 올려두어야 합니다. 하지만 메모리의 크기에는 한계가 있기에 제안된 것이 가상 메모리입니다. 프로세스 전체가 메모리 내에 올라 오지 않더라도 실행이 가능하도록 하는 기법이며, 프로그램이 물리 메모리보다 커도 된다는 주요 장점이 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 가상 주소 공간이 무엇인가요?
 
 한 프로세스가 메모리에 저장되는 논리적인 모습을 가상 메모리에 구현한 공간입니다. 프로세스가 요구하는 메모리 공간을 가상 메모리에서 제공함으로서, 현재 직접적으로 필요치 않은 메모리 공간은 실제 물리 메모리에 올리지 않는 것으로 물리 메모리를 절약할 수 있습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 요구 페이징이란 무엇인가요?
 
 가상 메모리 시스템에서 많이 사용되는, 초기에 필요한 것들만 적재하는 전략을 요구 페이징이라고 합니다. 실행과정에서 필요해질 때 페이지들을 적재합니다. 개별 페이지들은 페이저에 의해 관리됩니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 페이지 부재와 페이지 교체에 대해 설명해 주세요.
 
 페이지 부재(Page Fault)는 CPU에서 요청한 페이지가 현재 메모리에 없는 경우를 말합니다. 이 때 부재 페이지를 디스크에서 읽어와야 하는데 막대한 오버헤드가 발생합니다. 페이지 부재 발생 시 메모리에 해당 페이지를 적재해야 하지만 메모리가 꽉 찬 경우 가장 쓸모 없는 페이지를 쫓아내고 그 자리에 부재된 페이지를 적재하는 것이 페이지 교체입니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### 페이지 교체 알고리즘은 어떤 것들이 있습니까?
 
@@ -362,7 +378,7 @@ FIFO, 최적 페이지 교체, LRU(Least Recently Used) 페이지 교체, LFU(Le
 - **MFU 페이지 교체** : 참조 회수가 가장 작은 페이지가 최근에 메모리에 올라왔고, 앞으로 계속 사용될 것이라는 가정에서 만들어진 알고리즘입니다. 하지만 마찬가지로 오랫동안 사용되지 않기에 참조되지 않은 페이지가 계속 메모리에 머물게 되어 초기 가정에 어긋하는 시점이 발생할 수 있습니다. 또한 한창 집중적으로 사용되던 페이지가 교체되어 페이지 부재율을 상승시킬 수 있습니다.
 - LFU와 MFU 모두 최적(OPT) 페이지 교체를 제대로 근사하지 못하기 때문에, 잘 쓰이지 않습니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 #### LRU 알고리즘과 NUR 알고리즘의 차이점은 무엇인가요?
 
@@ -372,19 +388,19 @@ FIFO, 최적 페이지 교체, LRU(Least Recently Used) 페이지 교체, LFU(Le
 
 - https://velog.io/@adam2/OS기초-메모리-관리가상-메모리-페이지-부재-페이지-교채-스레싱
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 #### Page Reference String은 무엇인가요?
 
 메인 메모리에 올라와 있는 주소들은 페이지의 단위로 가져오기 때문에 페이지 번호가 연속되어 나타나게 되면 페이지 결함이 발생하지 않습니다. 따라서 CPU의 주소 요구에 따라 페이지 결함이 일어나지 않는 부분(연속된 부분)은 생략하여 표시하는 방법입니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ### MMU가 무엇인가요?
 
 메모리 관리장치는 논리 주소를 물리 주소로 변환해주는 장치입니다. 명령어 수행 시 메모리에 필요한 데이터가 없을 때 해당 데이터를 가져오는 역활을 합니다.
 
-**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#운영체제os)**
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#os)**
 
 ## ETC
 
