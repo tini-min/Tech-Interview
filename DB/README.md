@@ -37,6 +37,7 @@
 - [SQL injection에 대해 설명해 주세요.](#sql-injection에-대해-설명해-주세요)
     * [SQL injection을 방어할 수 있는 방법들을 설명해 주세요.](#sql-injection을-방어할-수-있는-방법들을-설명해-주세요)
     * [Statement vs PreparedStatement](#statement-vs-preparedstatement)
+- [CHAR와 VARCHAR의 차이는 무엇인가요?](#char와-varchar의-차이는-무엇인가요)
 - [NoSQL이 무엇인가요?](#nosql이-무엇인가요)
 
 </div>
@@ -232,6 +233,17 @@ Statement에는 보통 변수를 설정하고 바인딩하는 static sql이 사�
 - https://java.ihoney.pe.kr/76
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#db)**
+
+## CHAR와 VARCHAR의 차이는 무엇인가요?
+
+CHAR는 고정길이, VARCHAR는 가변길이라는 차이점이 있습니다. CHAR은 남은 공간을 스페이스로 채워 넣지만 VARCHAR는 빈 공간을 채우지 않습니다. 대신 레코드의 길이에 대한 정보가 헤더에 포함되어야 합니다. 속도면에서 CHAR가 아주 미세하게 빠를 수 있으나 성능저하의 문제를 일으킬 만큼 큰 차이가 아닙니다. 공간 할당 시 기존 길이보다 큰 데이터로 갱신하는 경우 CHAR는 스페이스로 할당한 공간을 사용하면 되지만, VARCHAR의 경우 블럭 분할 현상이 일어날 수 있지만, 이 또한 DBMS에서 이를 정리하는 기능을 제공하고 있습니다. 따라서 최근에는 VARCHAR의 사용을 권장하고 있습니다.
+
+##### 참고자료
+
+- https://mozi.tistory.com/229
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#db)**
+
 
 ## NoSQL이 무엇인가요?
 
