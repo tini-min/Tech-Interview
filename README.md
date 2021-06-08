@@ -153,6 +153,7 @@
         * [캐시 메모리의 작동 원리에 대해 설명해 주세요.](/ComputerArchitecture/#캐시-메모리의-작동-원리에-대해-설명해-주세요)
         * [Cache Miss의 종류 3가지에 대해 설명해 주세요.](/ComputerArchitecture/#Cache-Miss의-종류-3가지에-대해-설명해-주세요)
         * [캐시 메모리에서 사상이 무엇이고 사상 방식에 대해 설명해 주세요.](/ComputerArchitecture/#캐시-메모리에서-사상이-무엇이고-사상-방식에-대해-설명해-주세요)
+        * [캐시 메모리의 데이터가 업데이트 되었을 경우 취할 수 있는 방법에 대해서 설명해 주세요.](/ComputerArchitecture/#캐시-메모리의-데이터가-업데이트-되었을-경우-취할-수-있는-방법에-대해서-설명해-주세요)
     - [해밍코드 생성 및 해석 해보기](/ComputerArchitecture/#해밍코드-생성-및-해석-해보기)
     - [ARM 프로세서는 무엇인가요?](/ComputerArchitecture/#arm-프로세서는-무엇인가요)
         * [CISC와 RISC의 장단점은 무엇인가요?](/ComputerArchitecture/#CISC와-RISC의-장단점은-무엇인가요)
