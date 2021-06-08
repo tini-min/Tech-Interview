@@ -415,6 +415,7 @@ FIFO, 최적 페이지 교체, LRU(Least Recently Used) 페이지 교체, LFU(Le
 - [시스템 콜 종류](https://cloudstudying.kr/lectures/189)
 - [시스템 콜 예시](https://gyoogle.dev/blog/computer-science/operating-system/System%20Call.html)
 - 자원할당 알고리즘(교착상태 회피 알고리즘)
+- 메모리 배치 전략 : 최초 적합, 최적 적합, 최악 적합
 
 </div>
 </details>
