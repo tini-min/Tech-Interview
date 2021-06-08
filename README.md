@@ -124,6 +124,7 @@
     - [트랜잭션이 무엇인가요?](/DB/#트랜잭션이-무엇인가요)
         * [트랜잭션 격리 수준이 뭔가요?](/DB/#트랜잭션-격리-수준이-뭔가요)
         * [트랜잭션 격리성 관련 문제점들은 무엇인가요?](/DB/#트랜잭션-격리성-관련-문제점들은-무엇인가요)
+        * [트랜잭션 로킹(Locking)이 무엇인가요?](/DB/#트랜잭션-로킹locking이-무엇인가요)
     - [SQL injection에 대해 설명해 주세요.](/DB/#sql-injection에-대해-설명해-주세요)
         * [SQL injection을 방어할 수 있는 방법들을 설명해 주세요.](/DB/#sql-injection을-방어할-수-있는-방법들을-설명해-주세요)
         * [Statement vs PreparedStatement](/DB/#statement-vs-preparedstatement)
