@@ -244,6 +244,7 @@ Statement에는 보통 변수를 설정하고 바인딩하는 static sql이 사�
 - [전반적인 내용](https://github.com/WeareSoft/tech-interview/blob/master/contents/db.md)
 - [Statement vs PreparedStatement](https://java.ihoney.pe.kr/76)
 - NoSQL
+- [JOIN 동작 방식](https://sparkdia.tistory.com/18)
 
 </div>
 </details>
