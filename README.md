@@ -174,9 +174,11 @@
         * [스크럼이 무엇인가요?](/SoftwareEngineering/#스크럼이-무엇인가요)
     - [객체지향 프로그래밍이 무엇인가요?](/SoftwareEngineering/#객체지향-프로그래밍이-무엇인가요)
         * [OOP의 특징은 무엇이 있나요?](/SoftwareEngineering/#OOP의-특징은-무엇이-있나요)
+            + [오버라이딩과 오버로딩을 설명해 주세요.](/SoftwareEngineering/#오버라이딩과-오버로딩을-설명해-주세요)
         * [객체 지향 설계 원칙에 대해 설명해 주세요.](/SoftwareEngineering/#객체-지향-설계-원칙에-대해-설명해-주세요)
     - [함수형 프로그램밍이 무엇입니까?](/SoftwareEngineering/#함수형-프로그램밍이-무엇입니까)
         * [객체 지향 프로그래밍과 함수형 프로그래밍의 차이는 무엇인가요?](/SoftwareEngineering/#객체-지향-프로그래밍과-함수형-프로그래밍의-차이는-무엇인가요)
+    - [프레임워크가 무엇인가요?](/SoftwareEngineering/#프레임워크가-무엇인가요)
 
     </div>
     </details>
