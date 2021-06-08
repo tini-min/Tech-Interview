@@ -129,6 +129,7 @@
     - [SQL injection에 대해 설명해 주세요.](/DB/#sql-injection에-대해-설명해-주세요)
         * [SQL injection을 방어할 수 있는 방법들을 설명해 주세요.](/DB/#sql-injection을-방어할-수-있는-방법들을-설명해-주세요)
         * [Statement vs PreparedStatement](/DB/#statement-vs-preparedstatement)
+    - [CHAR와 VARCHAR의 차이는 무엇인가요?](/DB/#char와-varchar의-차이는-무엇인가요)
     - [NoSQL이 무엇인가요?](/DB/#nosql이-무엇인가요)
 
     </div>
