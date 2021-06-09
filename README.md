@@ -222,23 +222,50 @@
     [손코딩 예상 문제 및 예제 답안](/Algorithm/손코딩/)
 
 1. [Language](/Language/)
-
-    <details>
-    <summary><strong>목차</strong></summary>
-    <div>
-    <br>
-
     - [C](/Language/C/)
-    - [CPP](/Language/CPP/)
-    - [JAVA](/Language/JAVA/)
-    - [Python](/Language/Python)
+        <details>
+        <summary><strong>목차</strong></summary>
+        <div>
+        <br>
 
-    </div>
-    </details>
+
+
+        </div>
+        </details>
+    - [CPP](/Language/CPP/)
+        <details>
+        <summary><strong>목차</strong></summary>
+        <div>
+        <br>
+
+
+
+        </div>
+        </details>
+    - [JAVA](/Language/JAVA/)
+        <details>
+        <summary><strong>목차</strong></summary>
+        <div>
+        <br>
+
+
+
+        </div>
+        </details>
+    - [Python](/Language/Python/)
+        <details>
+        <summary><strong>목차</strong></summary>
+        <div>
+        <br>
+
+
+
+        </div>
+        </details>
 
 ---
-
 # Reference
+
 * [JaeYeopHan 님의 Interview_Question_for_Beginner](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
 * [Gyeseok Kim 님의 Tech Interview for developer](https://gyoogle.dev/blog/)
 * [WeareSoft 님의 tech-interview](https://github.com/WeareSoft/tech-interview)
