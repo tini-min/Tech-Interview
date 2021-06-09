@@ -238,7 +238,7 @@
         <div>
         <br>
 
-        [C++언어의 특징을 설명해 주세요.](/Language/CPP/#c언어의-특징을-설명해-주세요)
+        - [C++언어의 특징을 설명해 주세요.](/Language/CPP/#c언어의-특징을-설명해-주세요)
 
         </div>
         </details>
@@ -248,7 +248,7 @@
         <div>
         <br>
 
-
+        - [Java 언어의 특징을 설명해 주세요.](/Language/JAVA/#java-언어의-특징을-설명해-주세요)
 
         </div>
         </details>
