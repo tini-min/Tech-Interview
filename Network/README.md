@@ -421,11 +421,12 @@ REST의 기본원칙을 성실히 지켜 API를 디자인 하는 것입니다. R
 >시간적 여유가 있을 때 보충예정
 
 - [네트워크 계층 - IP 관련](#https://velog.io/@gndan4/네트워크-네트워크-계층)
-- [클라이언트가 url로 서버를 요청했을 때 상세 과정](https://owlgwang.tistory.com/1)
 - 3-way Handshake 보충
 - HTTP Method에서 PUT과 PATCH의 차이점(예시)
-- 단방향 암호화와 양방향 암호화
 - REST의 자원의 표현 (Json, XML 차이점)
+- [Servlet이란](https://gmlwjd9405.github.io/2018/10/28/servlet.html)
+- [Servlet과 JSP](https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html)
+- [MVC 아키텍쳐](https://asfirstalways.tistory.com/180?category=670025)
 
 </div>
 </details>
