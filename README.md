@@ -258,7 +258,36 @@
         <div>
         <br>
 
+        - [파이썬의 특징을 설명해 주세요.](/Language/Python/#파이썬의-특징을-설명해-주세요)
+            * [컴파일 언어와 인터프리터 언어의 차이점은 무엇인가요?](/Language/Python/#컴파일-언어와-인터프리터-언어의-차이점은-무엇인가요)
+            * [.pyc파일과 .py파일이 무엇인가요?](/Language/Python/#pyc파일과-py파일이-무엇인가요)
+        - [mutuable과 immutuable에 대해 설명해 주세요.](/Language/Python/#mutuable과-immutuable에-대해-설명해-주세요)
+        - [파이썬의 삼항연산자에 대해 설명해 주세요.](/Language/Python/#파이썬의-삼항연산자에-대해-설명해-주세요)
+        - [아래 Switch 구문을 파이썬으로 구현해 주세요.](/Language/Python/#아래-switch-구문을-파이썬으로-구현해-주세요)
+            ```cpp
+            using namespace std;
 
+            // Function to convert number into string
+            string numbers_to_strings(int argument){
+                switch(argument) {
+                    case 0:
+                        return "zero";
+                    case 1:
+                        return "one";
+                    case 2:
+                        return "two";
+                    default:
+                        return "nothing";
+                };
+            };
+
+            int main()
+            {
+                int argument = 0;
+                cout << numbers_to_strings(argument);
+                return 0;
+            }
+            ```
 
         </div>
         </details>
