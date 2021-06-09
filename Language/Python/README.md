@@ -132,7 +132,7 @@ y = 5 if x == 10 else -5
 ## 아래 Switch 구문을 파이썬으로 구현해 주세요.
 
 ```cpp
-#include<bits/stdc++.h>
+// C++
 using namespace std;
 
 // Function to convert number into string
@@ -160,12 +160,16 @@ int main()
 **예시코드**
 
 ```python
+# Python
 def numbers_to_strings(argument) :
     return {
         0 : 'zero',
         1 : 'one',
         2 : 'two'
     }.get(argument, 'nothing')
+
+argument = 0
+print(numbers_to_strings(argument))
 ```
 
 파이썬은 딕셔너리를 통해 충분히 스위치 구문을 구현할 수 있으므로 스위치 구문을 지원하지 않습니다. 또한, 함수를 `일급 객체`로 취급하기 때문에 아래와 같은 코드도 가능합니다.
