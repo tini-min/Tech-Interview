@@ -90,6 +90,8 @@ mutuable(Call by Reference)은 변경 가능한 객체입니다. 리스트와 �
 
 **예제**
 ```python
+# Python
+
 # list
 
 a = [1, 2, 3]
@@ -112,6 +114,7 @@ a == b # False
 ## 파이썬의 삼항연산자에 대해 설명해 주세요.
 
 ```c
+// C
 int main() {
     int x = 10;
     int y;
@@ -123,6 +126,7 @@ int main() {
 위와 같이 3개의 항을 이용한 연산을 삼항 연산자라고 하는데, 파이썬에는 해당 연산자가 없습니다. 다만 아래와 같이 구현할 수 있습니다.
 
 ```python
+# Python
 x = 10
 y = 5 if x == 10 else -5
 ```
@@ -175,6 +179,7 @@ print(numbers_to_strings(argument))
 파이썬은 딕셔너리를 통해 충분히 스위치 구문을 구현할 수 있으므로 스위치 구문을 지원하지 않습니다. 또한, 함수를 `일급 객체`로 취급하기 때문에 아래와 같은 코드도 가능합니다.
 
 ```python
+# Python
 def error(x, y) : return 'error'
 def add(x, y) : return x + y
 def sub(x, y) : return x - y
