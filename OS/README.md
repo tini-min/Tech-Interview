@@ -191,9 +191,9 @@ Critical Section(임계영역)이란 두 개 이상의의 Task가 자원을 공�
 경쟁 상태를 해결하는 것 즉, 데이터의 일관성을 유지하기 위해 Task들에게 하나의 자원에 대한 처리 권한을 주거나 순서를 조정하는 방법입니다. 이를 위한 기본 조건으로는 상호배제(Mutual Exclusion), 진행(Process), 한정된 대기(Bounded Waiting)가 필요하며 스핀락, 세마포, 뮤텍스, 모니터 등의 방식이 있습니다.
 
 > **Mutual Exclusion(상호 배제)**<br>
-> 프로세스 P1이 Critical Section에서 실행중이라면, 다른 프로세스들은 P1이 가진 Critical Section에서 실행될 수 없다.
+> 프로세스 P1이 Critical Section에서 실행중이라면, 다른 프로세스들은 P1이 가진 Critical Section에서 실행될 수 없다.<br>
 > **Progress(진행)**<br>
-> Critical Section에서 실행중인 프로세스가 없고, 별도의 동작이 없는 프로세스들만 Critical Section 진입 후보로서 참여될 수 있다.
+> Critical Section에서 실행중인 프로세스가 없고, 별도의 동작이 없는 프로세스들만 Critical Section 진입 후보로서 참여될 수 있다.<br>
 > **Bounded Waiting(한정된 대기)**<br>
 > P1이 Critical Section에 진입 신청 후 부터 받아들여질 때까지, 다른 프로세스들이 Critical Section에 진입하는 횟수는 제한이 있어야 한다.
 
