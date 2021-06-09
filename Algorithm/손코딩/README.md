@@ -6,7 +6,6 @@
 <details>
  <summary><strong style = "font-size : 120%;">목차</strong></summary>
  <div markdown = "1">
- <br>
 
 - [좌표 압축 - 백준 Silver2](#좌표-압축)
 - [나선 - 백준 Silver3](#나선)
