@@ -274,6 +274,7 @@ CHAR는 고정길이, VARCHAR는 가변길이라는 차이점이 있습니다. C
 - [JOIN 동작 방식](https://sparkdia.tistory.com/18)
 - [트랜잭션 관리 정책](https://d2.naver.com/helloworld/407507)
 - [UNDO와 REDO](https://brownbears.tistory.com/181)
+- [Elasticsearch vs. PostgreSQL](https://db-engines.com/en/system/Elasticsearch%3BPostgreSQL)
 
 </div>
 </details>

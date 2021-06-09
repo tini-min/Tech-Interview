@@ -440,6 +440,7 @@ REST의 기본원칙을 성실히 지켜 API를 디자인 하는 것입니다. R
 - [Servlet이란](https://gmlwjd9405.github.io/2018/10/28/servlet.html)
 - [Servlet과 JSP](https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html)
 - [MVC 아키텍쳐](https://asfirstalways.tistory.com/180?category=670025)
+- [CONNECTION TIMEOUT과 READ TIMEOUT](https://inyl.github.io/programming/2017/12/02/timeout.html)
 
 </div>
 </details>
