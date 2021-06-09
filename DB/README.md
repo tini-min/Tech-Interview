@@ -251,7 +251,7 @@ CHAR는 고정길이, VARCHAR는 가변길이라는 차이점이 있습니다. C
 
 ##### 참고자료
 
-- https://gyoogle.dev/blog/computer-science/data-base/SQL & NOSQL.html
+- https://gyoogle.dev/blog/computer-science/data-base/SQL%20&%20NOSQL.html
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#db)**
 
@@ -272,6 +272,8 @@ CHAR는 고정길이, VARCHAR는 가변길이라는 차이점이 있습니다. C
 - [Statement vs PreparedStatement](https://java.ihoney.pe.kr/76)
 - NoSQL
 - [JOIN 동작 방식](https://sparkdia.tistory.com/18)
+- [트랜잭션 관리 정책](https://d2.naver.com/helloworld/407507)
+- [UNDO와 REDO](https://brownbears.tistory.com/181)
 
 </div>
 </details>
