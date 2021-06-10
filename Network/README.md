@@ -32,7 +32,7 @@
         + [암호화 키를 비공개하고 복호화 키를 공개하는 경우에 대해 설명해 주세요.](#암호화-키를-비공개하고-복호화-키를-공개하는-경우에-대해-설명해-주세요)
     * [HTTP의 GET과 POST에 대해 설명해 주세요.](#http의-get과-post에-대해-설명해-주세요)
     * [조회에 POST보다 GET이 사용되는 이유는 무엇인가요?](#조회에-post보다-get이-사용되는-이유는-무엇인가요)
-    * [HTTP Method에서 PUT과 PATCH의 차이점을 설명해 주세요.](#http-method에서-put과-patch의-차이점을-설명해-주세요)
+    * [HTTP Method에서 POST과 PATCH의 차이점을 설명해 주세요.](#http-method에서-post과-patch의-차이점을-설명해-주세요)
     * [쿠키와 세션이 무엇이며, 필요한 이유가 무엇인가요?](#쿠키와-세션이-무엇이며-필요한-이유가-무엇인가요)
 - [소켓 프로그래밍이란 무엇인가요?](#소켓-프로그래밍이란-무엇인가요)
     * [클라이언트 소켓과 서버 소켓이 무엇인가요?](#클라이언트-소켓과-서버-소켓이-무엇인가요)
@@ -283,9 +283,9 @@ GET 방식은 서버에게 여러 번 요청을 하더라도 동일한 응답을
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#network)**
 
-### HTTP Method에서 PUT과 PATCH의 차이점을 설명해 주세요.
+### HTTP Method에서 POST과 PATCH의 차이점을 설명해 주세요.
 
-put -> 모두 교체<br>
+post -> 모두 교체<br>
 patch -> 일정부분<br>
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#network)**
