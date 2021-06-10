@@ -166,27 +166,29 @@
     <summary><strong>목차</strong></summary>
     <div markdown = "1">
 
-    - [하드웨어의 구성에 대해 설명해 주세요.](/ComputerArchitecture/#하드웨어의-구성에-대해-설명해-주세요)
-        * [RAM에서 Random이 의미하는 바가 무엇인가요?](/ComputerArchitecture/#ram에서-random이-의미하는-바가-무엇인가요)
-        * [SSD와 HDD의 차이점은?](/ComputerArchitecture/#ssd와-hdd의-차이점은)
-        * [시스템 버스는 무엇인가요?](/ComputerArchitecture/#시스템-버스는-무엇인가요)
-    - [CPU의 동작은 어떤 과정으로 이뤄지나요?](/ComputerArchitecture/#cpu의-동작은-어떤-과정으로-이뤄지나요)
-        * [명렁어 사이클이 무엇인가요?](/ComputerArchitecture/#명렁어-사이클이-무엇인가요)
-        * [인출 사이클과 실행 사이클에 의한 명령어 처리과정에 대해 설명해 주세요.](/ComputerArchitecture/#인출-사이클과-실행-사이클에-의한-명령어-처리과정에-대해-설명해-주세요)
-        * [간접 사이클과 인터럽트 사이클에 의한 명령어 처리과정에 대해 설명해 주세요.](/ComputerArchitecture/#간접-사이클과-인터럽트-사이클에-의한-명령어-처리과정에-대해-설명해-주세요)
-    - [파이프라이닝이 무엇인가요?](/ComputerArchitecture/#파이프라이닝이-무엇인가요)
-        * [파이프라인 해저드가 무엇인가요?](/ComputerArchitecture/#파이프라인-해저드가-무엇인가요)
-        * [파이프라인 해저드를 해결하기 위한 방안은 무엇인가요?](/ComputerArchitecture/#파이프라인-해저드를-해결하기-위한-방안은-무엇인가요)
-    - [캐시 메모리는 무엇인가요?](/ComputerArchitecture/#캐시-메모리는-무엇인가요)
-        * [캐시 메모리의 작동 원리에 대해 설명해 주세요.](/ComputerArchitecture/#캐시-메모리의-작동-원리에-대해-설명해-주세요)
-        * [Cache Miss의 종류 3가지에 대해 설명해 주세요.](/ComputerArchitecture/#Cache-Miss의-종류-3가지에-대해-설명해-주세요)
-        * [캐시 메모리에서 사상이 무엇이고 사상 방식에 대해 설명해 주세요.](/ComputerArchitecture/#캐시-메모리에서-사상이-무엇이고-사상-방식에-대해-설명해-주세요)
-        * [캐시 메모리의 데이터가 업데이트 되었을 경우 취할 수 있는 방법에 대해서 설명해 주세요.](/ComputerArchitecture/#캐시-메모리의-데이터가-업데이트-되었을-경우-취할-수-있는-방법에-대해서-설명해-주세요)
+    - ~~[하드웨어의 구성에 대해 설명해 주세요.](/ComputerArchitecture/#하드웨어의-구성에-대해-설명해-주세요)~~
+        * ~~[RAM에서 Random이 의미하는 바가 무엇인가요?](/ComputerArchitecture/#ram에서-random이-의미하는-바가-무엇인가요)~~
+        * ~~[SSD와 HDD의 차이점은?](/ComputerArchitecture/#ssd와-hdd의-차이점은)~~
+        * ~~[시스템 버스는 무엇인가요?](/ComputerArchitecture/#시스템-버스는-무엇인가요)~~
+    - ~~[CPU의 동작은 어떤 과정으로 이뤄지나요?](/ComputerArchitecture/#cpu의-동작은-어떤-과정으로-이뤄지나요)~~
+        * ~~[명렁어 사이클이 무엇인가요?](/ComputerArchitecture/#명렁어-사이클이-무엇인가요)~~
+        * ~~[인출 사이클과 실행 사이클에 의한 명령어 처리과정에 대해 설명해 주세요.](/ComputerArchitecture/#인출-사이클과-실행-사이클에-의한-명령어-처리과정에-대해-설명해-주세요)~~
+        * ~~[간접 사이클과 인터럽트 사이클에 의한 명령어 처리과정에 대해 설명해 주세요.](/ComputerArchitecture/#간접-사이클과-인터럽트-사이클에-의한-명령어-처리과정에-대해-설명해-주세요)~~
+    - ~~[파이프라이닝이 무엇인가요?](/ComputerArchitecture/#파이프라이닝이-무엇인가요)~~
+        * ~~[파이프라인 해저드가 무엇인가요?](/ComputerArchitecture/#파이프라인-해저드가-무엇인가요)~~
+        * ~~[파이프라인 해저드를 해결하기 위한 방안은 무엇인가요?](/ComputerArchitecture/#파이프라인-해저드를-해결하기-위한-방안은-무엇인가요)~~
+    - ~~[캐시 메모리는 무엇인가요?](/ComputerArchitecture/#캐시-메모리는-무엇인가요)~~
+        * ~~[캐시 메모리의 작동 원리에 대해 설명해 주세요.](/ComputerArchitecture/#캐시-메모리의-작동-원리에-대해-설명해-주세요)~~
+        * ~~[Cache Miss의 종류 3가지에 대해 설명해 주세요.](/ComputerArchitecture/#Cache-Miss의-종류-3가지에-대해-설명해-주세요)~~
+        * ~~[캐시 메모리에서 사상이 무엇이고 사상 방식에 대해 설명해 주세요.](/ComputerArchitecture/#캐시-메모리에서-사상이-무엇이고-사상-방식에-대해-설명해-주세요)~~
+        * ~~[캐시 메모리의 데이터가 업데이트 되었을 경우 취할 수 있는 방법에 대해서 설명해 주세요.](/ComputerArchitecture/#캐시-메모리의-데이터가-업데이트-되었을-경우-취할-수-있는-방법에-대해서-설명해-주세요)~~
+            > 지연 수정의 경우 구현 시 업데이트 여부를 기록해야 함.
     - [해밍코드 생성 및 해석 해보기](/ComputerArchitecture/#해밍코드-생성-및-해석-해보기)
-    - [보수를 사용하는 이유가 무엇인가요?](/ComputerArchitecture/#보수를-사용하는-이유가-무엇인가요)
-        * [1의 보수와 2의 보수를 설명해 주세요.](/ComputerArchitecture/#1의-보수와-2의-보수를-설명해-주세요)
+    - ~~[보수를 사용하는 이유가 무엇인가요?](/ComputerArchitecture/#보수를-사용하는-이유가-무엇인가요)~~
+        * ~~[1의 보수와 2의 보수를 설명해 주세요.](/ComputerArchitecture/#1의-보수와-2의-보수를-설명해-주세요)~~
     - [ARM 프로세서는 무엇인가요?](/ComputerArchitecture/#arm-프로세서는-무엇인가요)
-        * [CISC와 RISC의 장단점은 무엇인가요?](/ComputerArchitecture/#CISC와-RISC의-장단점은-무엇인가요)
+        > 시간나면 읽어 보기
+        * ~~[CISC와 RISC의 장단점은 무엇인가요?](/ComputerArchitecture/#CISC와-RISC의-장단점은-무엇인가요)~~
 
     </div>
     </details>
