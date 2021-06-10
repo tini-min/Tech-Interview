@@ -20,6 +20,11 @@
 - [mutuable과 immutuable에 대해 설명해 주세요.](#mutuable과-immutuable에-대해-설명해-주세요)
 - [파이썬의 삼항연산자에 대해 설명해 주세요.](#파이썬의-삼항연산자에-대해-설명해-주세요)
 - [아래 Switch 구문을 파이썬으로 구현해 주세요.](#아래-switch-구문을-파이썬으로-구현해-주세요)
+
+    <details>
+    <summary><strong>코드</strong></summary>
+    <div>
+
     ```cpp
     using namespace std;
 
@@ -44,6 +49,9 @@
         return 0;
     }
     ```
+
+    </div>
+    </details>
 
 </div>
 </details>
