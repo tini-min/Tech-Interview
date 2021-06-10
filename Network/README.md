@@ -24,7 +24,7 @@
     * [SYN Flooding이 무엇이며 이를 방어하는 방법은 무엇입니까?](#syn-flooding이-무엇이며-이를-방어하는-방법은-무엇입니까)
     * [TCP 연결이 수립되고 실제로 데이터를 보내는 방식을 설명하고 이를 효율적으로 하기 위해서 제안된 방식이 무엇인가요?](#tcp-연결이-수립되고-실제로-데이터를-보내는-방식을-설명하고-이를-효율적으로-하기-위해서-제안된-방식이-무엇인가요)
     * [TCP에서 흐름제어와 혼잡제어가 무엇입니까?](#tcp에서-흐름제어와-혼잡제어가-무엇입니까)
-- [TCP/IP(Transmission Control Protocol / Internet Protocol) 모델이 무엇입니까?](#tcp/iptransmission-control-protocol-/-internet-protocol-모델이-무엇입니까)
+- [TCP/IP(Transmission Control Protocol / Internet Protocol) 모델이 무엇입니까?](tcpiptransmission-control-protocol--internet-protocol-모델이-무엇입니까)
 - [HTTP와 HTTPS는 무엇인가요?](#http와-https는-무엇인가요)
     * [SSL의 동작 방식을 설명해 주세요.](#ssl의-동작-방식을-설명해-주세요)
     * [단방향 암호화와 양방향 암호화는 무엇인가요?](#단방향-암호화와-양방향-암호화는-무엇인가요)
