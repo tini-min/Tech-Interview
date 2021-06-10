@@ -208,7 +208,6 @@
     <details>
     <summary><strong>목차</strong></summary>
     <div>
-    <br>
 
     - [DFS와 BFS의 특징 및 차이점은?](/Algorithm/#dfs와-bfs의-특징-및-차이점은)
     - [피보나치 수를 구하는 함수를 다이나믹 프로그래밍으로 구현할 때, 탑 다운 방식과 바텀 업 방식이 무엇이고 또한, 이를 어떻게 구현할 수 있습니까?](/Algorithm/#피보나치-수를-구하는-함수를-다이나믹-프로그래밍으로-구현할-때-탑-다운-방식과-바텀-업-방식이-무엇이고-또한-이를-어떻게-구현할-수-있습니까)
@@ -226,7 +225,6 @@
         <details>
         <summary><strong>목차</strong></summary>
         <div>
-        <br>
 
         - [C언어의 특징을 설명해 주세요.](/Language/C/#c언어의-특징을-설명해-주세요)
 
@@ -236,7 +234,6 @@
         <details>
         <summary><strong>목차</strong></summary>
         <div>
-        <br>
 
         - [C++언어의 특징을 설명해 주세요.](/Language/CPP/#c언어의-특징을-설명해-주세요)
 
@@ -246,7 +243,6 @@
         <details>
         <summary><strong>목차</strong></summary>
         <div>
-        <br>
 
         - [Java 언어의 특징을 설명해 주세요.](/Language/JAVA/#java-언어의-특징을-설명해-주세요)
 
@@ -256,7 +252,6 @@
         <details>
         <summary><strong>목차</strong></summary>
         <div>
-        <br>
 
         - [파이썬의 특징을 설명해 주세요.](/Language/Python/#파이썬의-특징을-설명해-주세요)
             * [컴파일 언어와 인터프리터 언어의 차이점은 무엇인가요?](/Language/Python/#컴파일-언어와-인터프리터-언어의-차이점은-무엇인가요)
@@ -264,6 +259,11 @@
         - [mutuable과 immutuable에 대해 설명해 주세요.](/Language/Python/#mutuable과-immutuable에-대해-설명해-주세요)
         - [파이썬의 삼항연산자에 대해 설명해 주세요.](/Language/Python/#파이썬의-삼항연산자에-대해-설명해-주세요)
         - [아래 Switch 구문을 파이썬으로 구현해 주세요.](/Language/Python/#아래-switch-구문을-파이썬으로-구현해-주세요)
+
+            <details>
+            <summary><strong>목차</strong></summary>
+            <div>
+
             ```cpp
             using namespace std;
 
@@ -288,6 +288,9 @@
                 return 0;
             }
             ```
+
+            </div>
+            </details>
 
         </div>
         </details>
