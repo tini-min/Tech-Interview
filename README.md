@@ -254,7 +254,7 @@
         <summary><strong>목차</strong></summary>
         <div>
 
-        - [C언어의 특징을 설명해 주세요.](/Language/C/#c언어의-특징을-설명해-주세요)
+        - ~~[C언어의 특징을 설명해 주세요.](/Language/C/#c언어의-특징을-설명해-주세요)~~
 
         </div>
         </details>
@@ -263,7 +263,7 @@
         <summary><strong>목차</strong></summary>
         <div>
 
-        - [C++언어의 특징을 설명해 주세요.](/Language/CPP/#c언어의-특징을-설명해-주세요)
+        - ~~[C++언어의 특징을 설명해 주세요.](/Language/CPP/#c언어의-특징을-설명해-주세요)~~
 
         </div>
         </details>
@@ -272,7 +272,7 @@
         <summary><strong>목차</strong></summary>
         <div>
 
-        - [Java 언어의 특징을 설명해 주세요.](/Language/JAVA/#java-언어의-특징을-설명해-주세요)
+        - ~~[Java 언어의 특징을 설명해 주세요.](/Language/JAVA/#java-언어의-특징을-설명해-주세요)~~
 
         </div>
         </details>
