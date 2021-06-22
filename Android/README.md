@@ -1,10 +1,12 @@
 # Android
 
 <details>
- <summary><strong>용어 정리 (기초용어)</strong></summary>
+ <summary><strong>목록</strong></summary>
  <div markdown = "1">
 
-- https://brunch.co.kr/@toughrogrammer/14
+- [안드로이드의 4대 구성요소가 무엇인가요?](#안드로이드의-4대-구성요소가-무엇인가요)
+- [Activity의 생명주기가 무엇이가요?](#activity의-생명주기가-무엇이가요)
+- [스레드, 핸들러, 루퍼 예제](#스레드-핸들러-루퍼-예제)
 
 </div>
 </details>
