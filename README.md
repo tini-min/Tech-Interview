@@ -221,6 +221,11 @@
     [손코딩 예상 문제 및 예제 답안](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm/손코딩/)
 
 1. [Language](https://github.com/tini-min/Tech-Interview/tree/master/Language/)
+
+    <details>
+    <summary><strong>언어 목록</strong></summary>
+    <div markdown = "1">
+
     - [C](https://github.com/tini-min/Tech-Interview/tree/master/Language/C/)
         <details>
         <summary><strong>목차</strong></summary>
@@ -294,6 +299,22 @@
 
         </div>
         </details>
+
+    </div>
+    </details>
+
+1. [Android](https://github.com/tini-min/Tech-Interview/tree/master/Android/)
+    <details>
+    <summary><strong>목록</strong></summary>
+    <div markdown = "1">
+
+    - [안드로이드의 4대 구성요소가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Android/#안드로이드의-4대-구성요소가-무엇인가요)
+    - [Activity의 생명주기가 무엇이가요?](https://github.com/tini-min/Tech-Interview/tree/master/Android/#activity의-생명주기가-무엇이가요)
+    - [스레드, 핸들러, 루퍼 예제](#스레드-핸들러-루퍼-예제)
+    - [콜백(Callback)과 리스너(Listener)에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Android/#콜백callback과-리스너listener에-대해서-설명해-주세요)
+
+    </div>
+    </details>
 
 ---
 # Reference

@@ -1,12 +1,13 @@
 # Android
 
 <details>
- <summary><strong>목록</strong></summary>
- <div markdown = "1">
+<summary><strong>목록</strong></summary>
+<div markdown = "1">
 
 - [안드로이드의 4대 구성요소가 무엇인가요?](#안드로이드의-4대-구성요소가-무엇인가요)
 - [Activity의 생명주기가 무엇이가요?](#activity의-생명주기가-무엇이가요)
 - [스레드, 핸들러, 루퍼 예제](#스레드-핸들러-루퍼-예제)
+- [콜백(Callback)과 리스너(Listener)에 대해서 설명해 주세요.](#콜백callback과-리스너listener에-대해서-설명해-주세요)
 
 </div>
 </details>
@@ -34,9 +35,17 @@ onCreate -> onStrar -> onResume 메소드가 순차적으로 실행되면서 액
 ##### 참고자료
 
 - https://itmining.tistory.com/4?category=640759
-
 - https://bitsoul.tistory.com/108
-https://velog.io/안드로이드-스레드Thread와-핸들러Handler
+- https://velog.io/안드로이드-스레드Thread와-핸들러Handler
+
+## 콜백(Callback)과 리스너(Listener)에 대해서 설명해 주세요.
+
+둘은 비슷한 개념이지만, 콜백은 이벤트 발생 시 특정 메소드를 호출해 알려주고 리스너는 이벤트 발생 시 연결된 리스너들에게 이벤트롤 전달하는 차이가 있습니다. 즉, 리스너를 등록할 수 있는 갯수가 유일한 지, 그렇지 않은 지의 차이입니다. 
+
+##### 참고자료
+
+- https://www.charlezz.com/?p=768
+- https://onlyfor-me-blog.tistory.com/47
 
 ---
 # Reference
