@@ -17,6 +17,8 @@
 액티비티, 서비스, 브로드캐스트 리시버, 콘텐트 프로바이더가 핵심 구성요소이다.
 이외의 구성요소로는 인텐트, 인텐트 필터, 노티피케이션, 프래그먼트 등이 있다.
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
+
 ## Activity의 생명주기가 무엇이가요?
 
 기본적으로 액티비티를 시작하면
@@ -30,6 +32,8 @@ onCreate -> onStrar -> onResume 메소드가 순차적으로 실행되면서 액
 - onStop : 액티비티가 더이상 사용자에게 보여지지 않을 때 호출됨. 메모리가 부족할 경우에는 onStop 메소드가 호출되지 않을 수도 있음.
 - onDestroy : 액티비티가 소멸될 때 호출됨. finish() 메소드가 호출되거나 시스템이 메모리 확보를 위해 액티비티를 제거할 때 호출됨.
 
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
+
 ## 스레드, 핸들러, 루퍼 예제
 
 ##### 참고자료
@@ -37,6 +41,8 @@ onCreate -> onStrar -> onResume 메소드가 순차적으로 실행되면서 액
 - https://itmining.tistory.com/4?category=640759
 - https://bitsoul.tistory.com/108
 - https://velog.io/안드로이드-스레드Thread와-핸들러Handler
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
 
 ## 콜백(Callback)과 리스너(Listener)에 대해서 설명해 주세요.
 
@@ -46,6 +52,8 @@ onCreate -> onStrar -> onResume 메소드가 순차적으로 실행되면서 액
 
 - https://www.charlezz.com/?p=768
 - https://onlyfor-me-blog.tistory.com/47
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
 
 ---
 # Reference
