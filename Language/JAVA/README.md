@@ -5,6 +5,7 @@
  <div>
 
 - [Java 언어의 특징을 설명해 주세요.](#java-언어의-특징을-설명해-주세요)
+- [static에 대해서 설명해 주세요.](#static에-대해서-설명해-주세요)
 
 </div>
 </details>
@@ -32,6 +33,17 @@ Java는 C언어에 객체 지향적 기능을 추가하여 만든 C++과는 달�
 ##### 참고자료
 
 - http://tcpschool.com/java/java_intro_basic
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#java)**
+
+## static에 대해서 설명해 주세요.
+
+Java에는 한 번 할당되어 프로그램이 종료될 때 해제되는 데이터를 모으는 Static 영역이 있습니다. static 키워드를 사용한 데이터들은 해당 영역에 저장이 되며 큰 특징으로는 Garbage Collector가 이를 관리하지 않고, 해당 영역에 할당된 메모리는 모든 객체가 공유하는 메모리라는 점이 있습니다.
+
+##### 참고자료
+
+- https://mangkyu.tistory.com/47
+- https://wikidocs.net/228
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#java)**
 

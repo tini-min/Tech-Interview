@@ -250,6 +250,7 @@
         <div>
 
         - [Java 언어의 특징을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#java-언어의-특징을-설명해-주세요)
+        - [static에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#static에-대해서-설명해-주세요)
 
         </div>
         </details>
