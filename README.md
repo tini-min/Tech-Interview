@@ -318,15 +318,6 @@
     </details>
 
 1. [인성면접 대비](https://github.com/tini-min/Tech-Interview/tree/master/인성면접/)
-    <details>
-    <summary><strong>목록</strong></summary>
-    <div markdown = "1">
-
-    - [자신이 개발직과 맞다고 생각하나요?](https://github.com/tini-min/Tech-Interview/tree/master/인성면접/#자신이-개발직과-맞다고-생각하나요)
-        * [만약 다른 일에 더 흥미가 생긴다면 어떻게 할 것 같나요?](https://github.com/tini-min/Tech-Interview/tree/master/인성면접/#만약-다른-일에-더-흥미가-생긴다면-어떻게-할-것-같나요)
-
-    </div>
-    </details>
 
 ---
 # Reference
