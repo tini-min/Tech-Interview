@@ -96,6 +96,7 @@
         * [로드 밸런서가 서버를 선택하는 방식을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#로드-밸런서가-서버를-선택하는-방식을-설명해-주세요)
         * [L4 로드 밸런서와 L7 로드 밸런서에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#l4-로드-밸런서와-l7-로드-밸런서에-대해-설명해-주세요)
     - [REST(REpresentational State Transfer)란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#restrepresentational-state-transfer란-무엇인가요)
+        * [REST의 특징을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#rest의-특징을-설명해-주세요)
         * [RESTful API란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#restful-api-무엇인가요)
 
     </div>
@@ -306,7 +307,7 @@
 
 1. [Android](https://github.com/tini-min/Tech-Interview/tree/master/Android/)
     <details>
-    <summary><strong>목록</strong></summary>
+    <summary><strong>목차</strong></summary>
     <div markdown = "1">
 
     - [안드로이드의 4대 구성요소가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Android/#안드로이드의-4대-구성요소가-무엇인가요)
