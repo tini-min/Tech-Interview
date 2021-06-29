@@ -292,7 +292,7 @@
         - [아래 Switch 구문을 파이썬으로 구현해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/Python/#아래-switch-구문을-파이썬으로-구현해-주세요)
 
             <details>
-            <summary><strong>목차</strong></summary>
+            <summary><strong>코드</strong></summary>
             <div>
 
             ```cpp
