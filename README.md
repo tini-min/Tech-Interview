@@ -12,9 +12,12 @@
     <div markdown = "1">
 
     - [운영체제의 역활은 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#운영체제의-역활은-무엇입니까)
+        > 운영체제 : 시스템의 자원과 동작을 관리하는 소프트웨어
         * [커널 모드와 사용자 모드는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#커널-모드와-사용자-모드는-무엇인가요)
+            > 커널이란?
         * [시스템 콜은 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#시스템-콜은-무엇인가요)
     - [프로세스와 스레드는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#프로세스와-스레드는-무엇인가요)
+        > 프로세스는 `메모리에 적재`되어 실행되는 프로그램의 인스턴스!
         * [PCB는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#pcb는-무엇인가요)
         * [프로세스의 상태 전이를 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/OS/#프로세스의-상태-전이를-설명해-주세요)
         * [커널 레벨 스레드와 유저 레벨 스레드가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#커널-레벨-스레드와-유저-레벨-스레드가-무엇인가요)
@@ -27,12 +30,15 @@
         * [Context Switching이 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#context-switching이-무엇인가요)
     - [경쟁 상태란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#경쟁-상태란-무엇인가요)
         * [Critical Section(임계영역)과 Critical Section Problem(임계영역 문제)가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#critical-section임계영역과-critical-section-problem임계영역-문제가-무엇인가요)
+            > 위험한 코드 영역 & 제대로 처리 안했을 때 일어나는 문제
         * [동기화란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#동기화란-무엇인가요)
             + [동기화와 관련된 고전적인 문제들을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/OS/#동기화와-관련된-고전적인-문제들을-설명해-주세요)
             + [동기화를 제공하는 방식에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/OS/#동기화를-제공하는-방식에-대해-설명해-주세요)
+                > 모니터는 시간남으면 보충
             + [스핀락과 뮤텍스의 차이는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#스핀락과-뮤텍스의-차이는-무엇인가요)
             + [뮤텍스와 세마포어의 차이는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#뮤텍스와-세마포어의-차이는-무엇인가요)
         * [교착상태에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/OS/#교착상태에-대해-설명해-주세요)
+            > 전제 조건 4개 암기
     - [인터럽트가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#인터럽트가-무엇인가요)
         * [인터럽트 기능이 없으면 어떤 일이 발생하나요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#인터럽트-기능이-없으면-어떤-일이-발생하나요)
     - [스케줄러란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#스케줄러란-무엇인가요)
@@ -51,6 +57,7 @@
             + [LRU 알고리즘과 NUR 알고리즘의 차이점은 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#lru-알고리즘과-nur-알고리즘의-차이점은-무엇인가요)
             + [Page Reference String은 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#page-reference-string은-무엇인가요)
         * [MMU가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#mmu가-무엇인가요)
+            > 시간나면 다시 보기
 
     </div>
     </details>
@@ -62,11 +69,14 @@
     <div markdown = "1">
 
     - [OSI 7계층이 무엇이고 이를 나누는 이유가 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#osi-7계층이-무엇이고-이를-나누는-이유가-무엇입니까)
+        > 표준화 해놨다. 이해하기 쉽고 유지 보수가 쉽다.
         * [OSI 7계층의 각 계층을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#osi-7계층의-각-계층을-설명해-주세요)
         * [전이중 통신과 반이중 통신이 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#전이중-통신과-반이중-통신이-무엇입니까)
         * [ARP가 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#arp가-무엇입니까)
+            > IP to MAC
     - [TCP와 UDP의 장단점을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#tcp와-udp의-장단점을-설명해-주세요)
         * [가상회선 패킷 교환과 데이터그램 패킷 교환은 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#가상회선-패킷-교환과-데이터그램-패킷-교환은-무엇인가요)
+            > 패킷은 가상회선 식별번호를 부여받기에 식별 번호를 따라 가상회선을 이용한다.
         * [3-way 핸드셰이크와 4-way 핸드셰이크를 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#3-way-핸드셰이크와-4-way-핸드셰이크를-설명해-주세요)
             + [3-way Handshake에서 서버도 클라이언트의 ACK 패킷을 기다리는 이유는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#3-way-handshake에서-서버도-클라이언트의-ack-패킷을-기다리는-이유는-무엇인가요)
         * [SYN Flooding이 무엇이며 이를 방어하는 방법은 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#syn-flooding이-무엇이며-이를-방어하는-방법은-무엇입니까)
@@ -74,7 +84,9 @@
         * [TCP에서 흐름제어와 혼잡제어가 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#tcp에서-흐름제어와-혼잡제어가-무엇입니까)
     - [TCP/IP(Transmission Control Protocol / Internet Protocol) 모델이 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Network/tcpiptransmission-control-protocol--internet-protocol-모델이-무엇입니까)
     - [HTTP와 HTTPS는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#http와-https는-무엇인가요)
+        > 완전성 보장 : 데이터가 변조되지 않음을 뜻함
         * [SSL의 동작 방식을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#ssl의-동작-방식을-설명해-주세요)
+            > 시간나면 다시 보기
         * [단방향 암호화와 양방향 암호화는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#단방향-암호화와-양방향-암호화는-무엇인가요)
             + [대칭키와 공개키는 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#대칭키와-공개키는-무엇입니까)
             + [암호화 키를 비공개하고 복호화 키를 공개하는 경우에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#암호화-키를-비공개하고-복호화-키를-공개하는-경우에-대해-설명해-주세요)
@@ -86,16 +98,20 @@
         * [클라이언트 소켓과 서버 소켓이 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#클라이언트-소켓과-서버-소켓이-무엇인가요)
         * [소켓 API의 실행 흐름에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#소켓-api의-실행-흐름에-대해서-설명해-주세요)
         * [HTTP 통신과 소켓 통신의 장단점을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#http-통신과-소켓-통신의-장단점을-설명해-주세요)
+            > HTTP는 단방향 통신이다<br>
+            > 서버에서 연결할 수 있는 클라이언트의 수에 제한이 있다.
     - [웹 브라우저에 URL을 입력하면 일어나는 시나리오에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#웹-브라우저에-url을-입력하면-일어나는-시나리오에-대해-설명해-주세요)
         * [DNS 동작 방식을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#dns-동작-방식을-설명해-주세요)
         * [프록시 서버란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#프록시-서버란-무엇인가요)
     - [웹 서버와 웹 애플리케이션 서버란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#웹-서버와-웹-애플리케이션-서버란-무엇인가요)
     - [네트워크 바이트 오더가 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#네트워크-바이트-오더가-무엇입니까)
         * [빅엔디안과 리틀엔디안이 무엇이고, 각각의 장단점은 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#빅엔디안과-리틀엔디안이-무엇이고-각각의-장단점은-무엇입니까)
+        > 장단점은 시간나면 다시 보기
     - [로드 밸런싱이 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#로드-밸런싱이-무엇인가요)
         * [로드 밸런서가 서버를 선택하는 방식을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#로드-밸런서가-서버를-선택하는-방식을-설명해-주세요)
         * [L4 로드 밸런서와 L7 로드 밸런서에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#l4-로드-밸런서와-l7-로드-밸런서에-대해-설명해-주세요)
     - [REST(REpresentational State Transfer)란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#restrepresentational-state-transfer란-무엇인가요)
+        > HTTP URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미합니다.
         * [REST의 특징을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#rest의-특징을-설명해-주세요)
         * [RESTful API란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#restful-api-무엇인가요)
 
@@ -110,6 +126,7 @@
 
     - [데이터베이스의 정의는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#데이터베이스의-정의는-무엇인가요)
         * [데이터베이스의 특징은 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#데이터베이스의-특징은-무엇인가요)
+        > 그냥 시간되면 읽어보기
     - [인데스는 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#인데스는-무엇입니까)
         * [DBMS의 인덱스는 어떤 알고리즘으로 관리되나요?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#dbms의-인덱스는-어떤-알고리즘으로-관리되나요)
             + [해시 인덱스가 사용되는 예시를 들어주세요.](https://github.com/tini-min/Tech-Interview/tree/master/DB/#해시-인덱스가-사용되는-예시를-들어주세요)
@@ -121,6 +138,7 @@
     - [키의 종류를 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/DB/#키의-종류를-설명해-주세요)
     - [정규화란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#정규화란-무엇인가요)
         * [정규화의 종류를 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/DB/#정규화의-종류를-설명해-주세요)
+            > 각 정규화 다시 보기
         * [이상 현상에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/DB/#이상-현상에-대해서-설명해-주세요)
         * [정규화의 장단점과 단점에 대한 대응책은 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#정규화의-장단점과-단점에-대한-대응책은-무엇인가요)
     - [트랜잭션이 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#트랜잭션이-무엇인가요)
@@ -128,10 +146,14 @@
         * [트랜잭션 격리성 관련 문제점들은 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#트랜잭션-격리성-관련-문제점들은-무엇인가요)
         * [트랜잭션 로킹(Locking)이 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#트랜잭션-로킹locking이-무엇인가요)
     - [SQL injection에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/DB/#sql-injection에-대해-설명해-주세요)
+        > 각 공격 방법 시간나면 보기
         * [SQL injection을 방어할 수 있는 방법들을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/DB/#sql-injection을-방어할-수-있는-방법들을-설명해-주세요)
         * [Statement vs PreparedStatement](https://github.com/tini-min/Tech-Interview/tree/master/DB/#statement-vs-preparedstatement)
+            > 시간나면 보기
     - [CHAR와 VARCHAR의 차이는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#char와-varchar의-차이는-무엇인가요)
     - [NoSQL이 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/DB/#nosql이-무엇인가요)
+        > 대표 NoSQL은 몽고DB.<br>
+        > 추가적인 특징 시간나면 알아보기
 
     </div>
     </details>
@@ -158,10 +180,12 @@
         * [Cache Miss의 종류 3가지에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/ComputerArchitecture/#Cache-Miss의-종류-3가지에-대해-설명해-주세요)
         * [캐시 메모리에서 사상이 무엇이고 사상 방식에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/ComputerArchitecture/#캐시-메모리에서-사상이-무엇이고-사상-방식에-대해-설명해-주세요)
         * [캐시 메모리의 데이터가 업데이트 되었을 경우 취할 수 있는 방법에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/ComputerArchitecture/#캐시-메모리의-데이터가-업데이트-되었을-경우-취할-수-있는-방법에-대해서-설명해-주세요)
+            > 지연 수정의 경우 구현 시 업데이트 여부를 기록해야 함.
     - [해밍코드 생성 및 해석 해보기](https://github.com/tini-min/Tech-Interview/tree/master/ComputerArchitecture/#해밍코드-생성-및-해석-해보기)
     - [보수를 사용하는 이유가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/ComputerArchitecture/#보수를-사용하는-이유가-무엇인가요)
         * [1의 보수와 2의 보수를 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/ComputerArchitecture/#1의-보수와-2의-보수를-설명해-주세요)
     - [ARM 프로세서는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/ComputerArchitecture/#arm-프로세서는-무엇인가요)
+        > 시간나면 읽어 보기
         * [CISC와 RISC의 장단점은 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/ComputerArchitecture/#CISC와-RISC의-장단점은-무엇인가요)
 
     </div>
@@ -175,8 +199,8 @@
 
     - [TDD란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#tdd란-무엇인가요)
     - [애자일(Agile)이 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#애자일agile이-무엇인가요)
-        * [데브옵스가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#데브옵스가-무엇인가요)
         * [스크럼이 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#스크럼이-무엇인가요)
+        * [데브옵스가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#데브옵스가-무엇인가요)
     - [객체지향 프로그래밍이 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#객체지향-프로그래밍이-무엇인가요)
         * [OOP의 특징은 무엇이 있나요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#OOP의-특징은-무엇이-있나요)
             + [오버라이딩과 오버로딩을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#오버라이딩과-오버로딩을-설명해-주세요)
