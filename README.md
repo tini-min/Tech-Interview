@@ -251,7 +251,12 @@
         <div>
 
         - [Java 언어의 특징을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#java-언어의-특징을-설명해-주세요)
-        - [static에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#static에-대해서-설명해-주세요)
+        - [객체와 클래스의 차이점을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#객체와-클래스의-차이점을-설명해-주세요)
+        - [추상화란 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#추상화란-무엇입니까)
+            * [추상클래스와 인터페이스에 대해 설명해 주세요.](#추상클래스와-인터페이스에-대해-설명해-주세요)
+        - [자바 메모리 관리에 대해 설명해 주세요.](#자바-메모리-관리에-대해-설명해-주세요)
+            * [Garbage Collector에 대해 설명해 주세요.](#garbage-collector에-대해-설명해-주세요)
+            * [static에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#static에-대해서-설명해-주세요)
 
         </div>
         </details>
