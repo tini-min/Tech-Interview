@@ -275,7 +275,12 @@
         <div>
 
         - [Java 언어의 특징을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#java-언어의-특징을-설명해-주세요)
-        - [static에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#static에-대해서-설명해-주세요)
+        - [객체와 클래스의 차이점을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#객체와-클래스의-차이점을-설명해-주세요)
+        - [추상화란 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#추상화란-무엇입니까)
+            * [추상클래스와 인터페이스에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#추상클래스와-인터페이스에-대해-설명해-주세요)
+        - [자바 메모리 관리에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#자바-메모리-관리에-대해-설명해-주세요)
+            * [Garbage Collection에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#garbage-collection에-대해-설명해-주세요)
+            * [static에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Language/JAVA/#static에-대해서-설명해-주세요)
 
         </div>
         </details>
@@ -335,8 +340,13 @@
     <div markdown = "1">
 
     - [안드로이드의 4대 구성요소가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Android/#안드로이드의-4대-구성요소가-무엇인가요)
-    - [Activity의 생명주기가 무엇이가요?](https://github.com/tini-min/Tech-Interview/tree/master/Android/#activity의-생명주기가-무엇이가요)
+        * [안드로이드의 4대 구성요소의 역활을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Android/#안드로이드의-4대-구성요소의-역활을-설명해-주세요)
+            + [Content Provider와 Content Resolver의 차이점은 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Android/#content-provider와-content-resolver의-차이점은-무엇입니까)
+    - [Activity의 생명주기에 대해 설명해 주세요?](https://github.com/tini-min/Tech-Interview/tree/master/Android/#activity의-생명주기에-대해-설명해-주세요)
+        * [Fragment의 생명주기에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Android/#fragment의-생명주기에-대해-설명해-주세요)
     - [스레드, 핸들러, 루퍼 예제](#스레드-핸들러-루퍼-예제)
+        * [ANR에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Android/#anr에-대해-설명해-주세요)
+    - [Context에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Android/#context에-대해-설명해-주세요)
     - [콜백(Callback)과 리스너(Listener)에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Android/#콜백callback과-리스너listener에-대해서-설명해-주세요)
 
     </div>
