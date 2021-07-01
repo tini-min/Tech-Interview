@@ -7,8 +7,10 @@
 - [안드로이드의 4대 구성요소가 무엇인가요?](#안드로이드의-4대-구성요소가-무엇인가요)
     * [안드로이드의 4대 구성요소의 역활을 설명해 주세요.](#안드로이드의-4대-구성요소의-역활을-설명해-주세요)
         + [Content Provider와 Content Resolver의 차이점은 무엇입니까?](#content-provider와-content-resolver의-차이점은-무엇입니까)
-- [Activity의 생명주기에 대해 설명해 주세요.](#activity의-생명주기에-대해-설명해-주세요)
+- [생명주기에 대해 설명해 주세요.](#생명주기에-대해-설명해-주세요)
+    * [Activity의 생명주기에 대해 설명해 주세요.](#activity의-생명주기에-대해-설명해-주세요)
     * [Fragment의 생명주기에 대해 설명해 주세요.](#fragment의-생명주기에-대해-설명해-주세요)
+    * [Service의 생명주기에 대해 설명해 주세요.](#service의-생명주기에-대해-설명해-주세요)
 - [스레드, 핸들러, 루퍼 예제](#스레드-핸들러-루퍼-예제)
     * [ANR에 대해 설명해 주세요.](#anr에-대해-설명해-주세요)
 - [Context에 대해 설명해 주세요.](#context에-대해-설명해-주세요)
@@ -56,19 +58,29 @@
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
 
-## Activity의 생명주기에 대해 설명해 주세요.
+## 생명주기에 대해 설명해 주세요.
+
+4대 컴포넌트 중 액티비티와 서비스 이외에도 프래그먼트는 생명주기를 가지고 있습니다. 앱의 상태 변화에 적합한 동작을 실행할 수 있도록 설계된 요소이며, 특히 액티비티의 경우 동시에 2개의 액티비티를 전시할 수 없기 때문에, 앱 전환을 적절하게 처리하여야 더욱 안정적으로 기능할 수 있습니다.
+
+##### 참고자료
+
+- https://velog.io/@eun3673/application-fundamentals-lifecycle
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
+
+### Activity의 생명주기에 대해 설명해 주세요.
 
 ![Activity 생명주기](./img/Activity%20생명주기.png)
 
-기본적으로 액티비티를 시작하면 onCreate -> onStrar -> onResume 메소드가 순차적으로 실행되면서 액티비티가 실행된다. 이후 onPause -> onStop -> onDestroy 메소드가 순차적으로 실행되면서 액티비티가 완전 종료된다.
+기본적으로 액티비티를 시작하면 onCreate -> onStrar -> onResume 메소드가 순차적으로 실행되면서 액티비티가 실행됩니다. 이후 onPause -> onStop -> onDestroy 메소드가 순차적으로 실행되면서 액티비티가 완전 종료됩니다.
 
-- onCreate : 액티비티가 생성될 때 호출되며 사용자 인터페이스 초기화에 사용됨.
-- onRestart : 액티비티가 멈췄다가 다시 시작되기 바로 전에 호출됨.
-- onStart : 액티비티가 사용자에게 보여지기 바로 직전에 호출됨.
-- onResume : 액티비티가 사용자와 상호작용하기 바로 전에 호출됨.
-- onPause : 다른 액티비티가 보여질 때 호출됨. 데이터 저장, 스레드 중지 등의 처리를 하기에 적당한 메소드.
-- onStop : 액티비티가 더이상 사용자에게 보여지지 않을 때 호출됨. 메모리가 부족할 경우에는 onStop 메소드가 호출되지 않을 수도 있음.
-- onDestroy : 액티비티가 소멸될 때 호출됨. finish() 메소드가 호출되거나 시스템이 메모리 확보를 위해 액티비티를 제거할 때 호출됨.
+- **onCreate()** : 액티비티가 생성될 때 호출되며 사용자 인터페이스 초기화에 사용됩니다.
+- **onRestart()** : 액티비티가 멈췄다가 다시 시작되기 바로 전에 호출됩니다.
+- **onStart()** : 액티비티가 사용자에게 보여지기 바로 직전에 호출됩니다.
+- **onResume()** : 액티비티가 사용자와 상호작용하기 바로 전에 호출됩니다.
+- **onPause()** : 다른 액티비티가 보여질 때 호출됩니다. 데이터 저장, 스레드 중지 등의 처리를 하기에 적당한 메소드.
+- **onStop()** : 액티비티가 더이상 사용자에게 보여지지 않을 때 호출됩니다. 다시 기존 액티비티로 돌아오면 `onStart()`가, 사용자나 시스템에 의해 액티비티가 완전히 종료되면 `onDestroy()`가 호출됩니다.
+- **onDestroy()** : 액티비티가 소멸될 때 호출됩니다. `finish()`가 호출되거나 시스템이 메모리 확보를 위해 액티비티를 제거할 때 호출됩니다.
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
 
@@ -76,7 +88,31 @@
 
 ![Fragment 생명주기](./img/Fragment%20생명주기.png)
 
-보류
+- **onAttatch()** : Fragment가 Activity에 추가될 때 호출됩니다.
+- **onCreate()** : Activity에서의 `oncreate()`와 비슷하지만, UI관련 작업을 할 수 없습니다.
+- **onCreateView()** : Fragment에 속한 View를 초기화할 수 있습니다.
+- **onActivityCreated()** : Activity와 Fragment의 View를 모두 생성하고 난 다음 호출됩니다. 모든 View가 생성된 뒤이기에 UI 변경 작업이 가능합니다.
+- **onStart() ~ onStop()** : Activity의 생명주기와 비슷한 상태 변환이 일어납니다.
+- **onDestoryView()** : View 리소스를 해제할 때 호출되며, BackStack에서 Fragment가 다시 돌아올 땐 `onCreateView()`가 호출됩니다.
+- **onDestory()** : Fragment 상태를 완전히 종료할 때 호출됩니다.
+- **onDetach()** : Fragment가 제거되고, Activity에서 완전히 해제될 때 호출됩니다.
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
+
+### Service의 생명주기에 대해 설명해 주세요.
+
+서비스는 아래의 두가지 case의 생명주기를 가집니다.
+
+1. startService()를 통해 호출된 서비스
+2. bindService()를 통해 호출된 서비스
+
+![Service 생명주기](./img/Service%20생명주기.png)
+
+#### startService()를 통해 호출된 서비스
+서비스 스스로가 서비스를 종료하거나, 클라이언트가 `stopService()`를 호출하는 경우, 서비스는 소멸됩니다.
+
+#### bindService()를 통해 호출된 서비스
+서비스에 연결된 클라이언트가 모두 `unbindService()`된 경우, 서비스는 소멸됩니다.
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
 
