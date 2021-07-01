@@ -203,6 +203,7 @@
         * [데브옵스가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#데브옵스가-무엇인가요)
     - [객체지향 프로그래밍이 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#객체지향-프로그래밍이-무엇인가요)
         * [OOP의 특징은 무엇이 있나요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#OOP의-특징은-무엇이-있나요)
+            + [응집도와 결합도가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#응집도와-결합도가-무엇인가요)
             + [오버라이딩과 오버로딩을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#오버라이딩과-오버로딩을-설명해-주세요)
         * [객체 지향 설계 원칙에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#객체-지향-설계-원칙에-대해-설명해-주세요)
     - [함수형 프로그램밍이 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#함수형-프로그램밍이-무엇입니까)
