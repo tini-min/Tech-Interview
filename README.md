@@ -34,7 +34,6 @@
         * [동기화란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#동기화란-무엇인가요)
             + [동기화와 관련된 고전적인 문제들을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/OS/#동기화와-관련된-고전적인-문제들을-설명해-주세요)
             + [동기화를 제공하는 방식에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/OS/#동기화를-제공하는-방식에-대해-설명해-주세요)
-                > 모니터는 시간남으면 보충
             + [스핀락과 뮤텍스의 차이는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#스핀락과-뮤텍스의-차이는-무엇인가요)
             + [뮤텍스와 세마포어의 차이는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/OS/#뮤텍스와-세마포어의-차이는-무엇인가요)
         * [교착상태에 대해 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/OS/#교착상태에-대해-설명해-주세요)
