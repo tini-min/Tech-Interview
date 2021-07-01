@@ -74,6 +74,7 @@
         * [ARP가 무엇입니까?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#arp가-무엇입니까)
             > IP to MAC
     - [TCP와 UDP의 장단점을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#tcp와-udp의-장단점을-설명해-주세요)
+        * [DNS나 실시간 스트리밍은 신뢰성이 필요없나요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#dns나-실시간-스트리밍은-신뢰성이-필요없나요)
         * [가상회선 패킷 교환과 데이터그램 패킷 교환은 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#가상회선-패킷-교환과-데이터그램-패킷-교환은-무엇인가요)
             > 패킷은 가상회선 식별번호를 부여받기에 식별 번호를 따라 가상회선을 이용한다.
         * [3-way 핸드셰이크와 4-way 핸드셰이크를 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#3-way-핸드셰이크와-4-way-핸드셰이크를-설명해-주세요)
