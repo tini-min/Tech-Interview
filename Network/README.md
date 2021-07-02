@@ -210,6 +210,8 @@ TCP는 일련 번호와 확인 응답 번호를 통해 데이터를 전송합니
 
 ## TCP/IP(Transmission Control Protocol / Internet Protocol) 모델이 무엇입니까?
 
+![TCP/IP 모델](./img/TCP,IP%20모델.png)
+
 OST 모델을 4계층으로 단순화 시켜서 사용하는 모델입니다. 응용 계층, 전송 계층, 인터넷 계층, 네트워크 접속 계층으로 나뉩니다.
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#network)**
