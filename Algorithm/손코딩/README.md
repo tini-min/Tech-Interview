@@ -7,6 +7,7 @@
  <summary><strong style = "font-size : 120%;">목차</strong></summary>
  <div markdown = "1">
 
+- [팬케익 뒤집기 - 백준 Gold5](#팬케익-뒤집기)
 - [좌표 압축 - 백준 Silver2](#좌표-압축)
 - [나선 - 백준 Silver3](#나선)
 - [달팽이 - 백준 Silver3](#달팽이)
@@ -20,6 +21,55 @@
 
 </div>
 </details>
+
+## 팬케익 뒤집기
+#### [문제 - 백준 Gold5](https://www.acmicpc.net/problem/2759)
+
+서로 다른 크기의 n개의 팬케익이 쌓여 있다. 순서 없이 마구 쌓여져있는 팬케익을 크기 순대로 쌓으려고 한다. 가장 위에는 제일 작은 크기의 팬케익이 있어야 되고, 가장 아래에는 제일 큰 크기의 팬케익이 있어야 한다.
+
+팬케익을 뒤집는 방법은 위에서 k개의 순서를 뒤집는 것이다. 따라서 k번째 팬케익이 가장 위로 올라오게 되고, 제일 위에 있던 팬케익은 k번째가 된다.
+
+다음 예를 보자.
+
+![팬케익 뒤집기](./img/팬케익%20뒤집기.png)
+
+팬케익이 쌓여있는 상태가 주어졌을 때, 이를 순서대로 만드는 방법을 찾아 출력하는 프로그램을 작성하시오. 팬케익은 최대 2n-3번 뒤집을 수 있다.
+
+**입력**<br>
+첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 숫자 여러개가 공백으로 구분되어있다. 첫 번째 숫자는 팬케익의 개수 N이고, 그 다음 N개의 숫자는 팬케익의 크기이다. 가장 위에 있는 팬케익이 첫 숫자이고, 마지막 숫자는 제일 아래에 있는 팬케익이다.  N은 30보다 작거나 같다. 팬케익의 크기는 서로 다르며, 1보다 크거나 같고, N보다 작거나 같다.
+
+**출력**<br>
+각 테스트 케이스에 대해 한 줄에 하나씩 뒤집는 방법을 출력한다. 제일 먼저 뒤집는 횟수 K를 출력한다. 그 다음 뒤집는 방법을 순서대로 출력하면 된다. 뒤집는 방법이 여러개일 때는, 아무거나 출력하면 된다.
+
+<details>
+ <summary><strong>답안예시 (python)</strong></summary>
+ <div markdown = "1">
+ <br>
+
+```python
+t = int(input())
+for tc in range(t) :
+	cake = list(map(int, input().split()))
+	n = cake[0]
+	answer = []
+	for i in range(n, 1, -1) :
+		ind = cake[1:].index(i) + 1
+		if i == ind : continue
+		if ind == 1 : 
+			answer.append(i)
+			cake[1:i + 1] = cake[i:0:-1]
+		else :
+			answer += [ind, i]
+			cake[1:ind + 1] = cake[ind:0:-1]
+			cake[1:i + 1] = cake[i:0:-1]
+	print(len(answer), end = ' ')
+	for ans in answer : print(ans, end = ' ')
+```
+
+</div>
+</details>
+
+**[뒤로](https://github.com/tini-min/Tech-Interview/tree/master/Algorithm) / [위로](#손코딩-문제)**
 
 ## 좌표 압축
 #### [문제 - 백준 Silver2](https://www.acmicpc.net/problem/18870)
