@@ -210,6 +210,8 @@
         * [객체 지향 프로그래밍과 함수형 프로그래밍의 차이는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#객체-지향-프로그래밍과-함수형-프로그래밍의-차이는-무엇인가요)
     - [프레임워크가 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#프레임워크가-무엇인가요)
 
+    - [디자인패턴](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#디자인패턴)
+
     </div>
     </details>
 

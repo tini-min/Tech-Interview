@@ -16,6 +16,7 @@
 - [함수형 프로그램밍이 무엇입니까?](#함수형-프로그램밍이-무엇입니까)
     * [객체 지향 프로그래밍과 함수형 프로그래밍의 차이는 무엇인가요?](#객체-지향-프로그래밍과-함수형-프로그래밍의-차이는-무엇인가요)
 - [프레임워크가 무엇인가요?](#프레임워크가-무엇인가요)
+- [디자인패턴](#디자인패턴)
 
 </div>
 </details>
@@ -137,5 +138,112 @@
 ##### 참고자료
 
 - https://moolgogiheart.tistory.com/87
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#software-engineering)**
+
+## 디자인패턴
+
+<details>
+ <summary><strong>목차</strong></summary>
+ <div markdown = "1">
+
+- [싱글턴 패턴](#싱글톤-패턴)
+
+</div>
+</details>
+
+### 싱글턴 패턴
+
+#### 필요성
+
+`Singleton Pattern(싱글턴 패턴)`이란 애플리케이션에서 인스턴스를 하나만 만들어 사용하기 위한 패턴입니다. 커넥션 풀, 스레드 풀, 디바이스 설정 객체 등의 경우, 인스턴스를 여러 개 만들게 되면 자원을 낭비하게 되거나 버그를 발생시킬 수 있으므로 오직 하나만 생성하고 그 인스턴스를 사용하도록 하는 것이 이 패턴의 목적입니다.
+
+#### 구현
+
+```java
+public class Singleton {
+    private static Singleton singletonObject;
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        if (singletonObject == null) {
+            singletonObject = new Singleton();
+        }
+        return singletonObject;
+    }
+}
+```
+> 동기화 문제가 해결되지 않음.
+
+```java
+public class Singleton {
+    private static Singleton singletonObject;
+
+    private Singleton() {}
+
+    public static synchronized Singleton getInstance() {
+        if (singletonObject == null) {
+            singletonObject = new Singleton();
+        }
+        return singletonObject;
+    }
+}
+```
+> `synchronized`를 이용하여 간단하게 동기화 문제를 해결할 수 있지만 성능상 단점이 존재.
+
+```java
+public class Singleton {
+    private static Singleton singletonObject;
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        if (singletonObject == null) {
+            synchronized (Singleton.class) {
+                if (singletonObject == null) {
+                    singletonObject = new Singleton();
+                }
+            }
+        }
+        return singletonObject;
+    }
+}
+```
+> `DCL(Double Checking Locking)`을 써서 `getInstance()`에서 동기화 되는 영역을 줄일 수 있음. 초기에 객체를 생성하지 않으면서도 동기화하는 부분이 작음. 그러나 해당 코드는 멀티코어 환경에서 동작할 때, 하나의 CPU 를 제외하고는 다른 CPU 가 lock 이 걸림.
+
+```java
+public class Singleton {
+    private static volatile Singleton singletonObject = new Singleton();
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        return singletonObject;
+    }
+}
+```
+> 클래스가 로딩되는 시점에 미리 객체를 생성해두고 그 객체를 반환. 인스턴스가 사용되지 않더라도 처음부터 끝까지 객체가 메모리에 있음.<br>
+> cf) volatile : 컴파일러가 특정 변수에 대해 옵티마이져가 캐싱을 적용하지 못하도록 하는 키워드
+
+```java
+public class Singleton {
+    private Singleton() {}
+
+    private static class SingletonHolder {
+        public static final Singleton INSTANCE = new Singleton();
+    }
+
+    public static Singleton getInstance() {
+        return SingletonHolder.INSTANCE;
+    }
+}
+```
+> `getInstance()`가 호출되는 시점에 Singletone 객체가 생성됨. 최신 VM은 클래스를 초기화하기 위한 필드 접근은 동기화 되므로 2개의 인스턴스가 생성되지는 않음.
+
+##### 참고자료
+- https://asfirstalways.tistory.com/335
+
+**[위로](#디자인패턴)**
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#software-engineering)**
