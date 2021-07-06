@@ -50,7 +50,9 @@
     * [L4 로드 밸런서와 L7 로드 밸런서에 대해 설명해 주세요.](#l4-로드-밸런서와-l7-로드-밸런서에-대해-설명해-주세요)
 - [REST(REpresentational State Transfer)란 무엇인가요?](#restrepresentational-state-transfer란-무엇인가요)
     * [REST의 특징을 설명해 주세요.](#rest의-특징을-설명해-주세요)
-    * [RESTful API란 무엇인가요?](#restful-api-무엇인가요)
+    * [RESTful API란 무엇인가요?](#restful-api란-무엇인가요)
+- [Servelet과 JSP는 무엇인가요?](#servelet과-jsp는-무엇인가요)
+    * [MVC 패턴에 대해서 설명해 주세요.](#mvc-패턴에-대해서-설명해-주세요)
 
 </div>
 </details>
@@ -491,6 +493,42 @@ REST의 기본원칙을 성실히 지켜 API를 디자인 하는 것입니다. R
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#network)**
 
+## Servelet과 JSP는 무엇인가요?
+
+Servelet은 서버에서 웹페이지 등을 동적으로 생성하거나 데이터 처리를 수행하기 위해 자바로 작성된 프로그램 입니다. JSP는 HTML을 코딩하기가 너무 어렵고 불편해서 HTML 내부에서 Java 코드를 삽입하는 형식입니다. 동일한 역활을 하기에 현재는 각자의 장점을 최대한 활용할 수 있도록 각각의 역활을 재분배하여 사용되고 있습니다.
+
+##### 참고자료
+
+- https://blog.naver.com/acornedu/221128616501
+- https://gmlwjd9405.github.io/2018/10/28/servlet.html
+- https://gmlwjd9405.github.io/2018/11/03/jsp.html
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#network)**
+
+### MVC 패턴에 대해서 설명해 주세요.
+
+M(Model), V(View), C(Controller)로 나누어 서버를 구성하는 모델을 의미합니다.
+
+![MVC 구동원리](./img/MVC%20구동원리.jpeg)
+
+Client-Server 구조로 요청을 하면 그에 맞는 응답을 하는 구조를 기본으로 하고 있습니다.
+
+1. 웹 브라우저가 웹 서버에 웹 애플리케이션 실행을 요청한다. (MVC 구조가 WAS라고 보면 된다.)
+2. 웹 서버는 들어온 요청을 처리할 수 있는 Servelet을 찾아서 요청을 전달한다.
+3. Servelet은 모델 자바 객체의 메서드를 호출한다.
+4. 데이터를 가공하여 값 객체를 생성하거나, JDBC를 사용하여 데이터베이스와의 인터랙션을 통해 값 객체를 생성한다.
+5. 업무 수행을 마친 결과값을 컨트롤러에게 반환한다.
+6. 컨트롤러는 모델로부터 받은 결과값을 View에게 전달한다.
+7. JSP는 전달받은 값을 참조하여 출력할 결과 화면을 만들고 컨트롤러에게 전달한다.
+8. 뷰로부터 받은 화면을 웹 서버에게 전달한다.
+9. 웹 브라우저는 웹 서버로부터 요청한 결과값을 응답받으면 그 값을 화면에 출력한다.
+
+##### 참고자료
+
+- https://asfirstalways.tistory.com/180
+
+**[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#network)**
+
 ## ETC
 
 <details>
@@ -500,12 +538,8 @@ REST의 기본원칙을 성실히 지켜 API를 디자인 하는 것입니다. R
 >시간적 여유가 있을 때 보충예정
 
 - [네트워크 계층 - IP 관련](https://velog.io/@gndan4/네트워크-네트워크-계층)
-- 3-way Handshake 보충
 - HTTP Method에서 PUT과 PATCH의 차이점(예시)
 - REST의 자원의 표현 (Json, XML 차이점)
-- [Servlet이란](https://gmlwjd9405.github.io/2018/10/28/servlet.html)
-- [Servlet과 JSP](https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html)
-- [MVC 아키텍쳐](https://asfirstalways.tistory.com/180?category=670025)
 - [CONNECTION TIMEOUT과 READ TIMEOUT](https://inyl.github.io/programming/2017/12/02/timeout.html)
 
 </div>

@@ -114,6 +114,8 @@
         > HTTP URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미합니다.
         * [REST의 특징을 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#rest의-특징을-설명해-주세요)
         * [RESTful API란 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#restful-api-무엇인가요)
+    - [Servelet과 JSP는 무엇인가요?](https://github.com/tini-min/Tech-Interview/tree/master/Network/#servelet과-jsp는-무엇인가요)
+        * [MVC 패턴에 대해서 설명해 주세요.](https://github.com/tini-min/Tech-Interview/tree/master/Network/#mvc-패턴에-대해서-설명해-주세요)
 
     </div>
     </details>
