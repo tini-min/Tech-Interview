@@ -507,25 +507,7 @@ Servelet은 서버에서 웹페이지 등을 동적으로 생성하거나 데이
 
 ### MVC 패턴에 대해서 설명해 주세요.
 
-M(Model), V(View), C(Controller)로 나누어 서버를 구성하는 모델을 의미합니다.
-
-![MVC 구동원리](./img/MVC%20구동원리.jpeg)
-
-Client-Server 구조로 요청을 하면 그에 맞는 응답을 하는 구조를 기본으로 하고 있습니다.
-
-1. 웹 브라우저가 웹 서버에 웹 애플리케이션 실행을 요청한다. (MVC 구조가 WAS라고 보면 된다.)
-2. 웹 서버는 들어온 요청을 처리할 수 있는 Servelet을 찾아서 요청을 전달한다.
-3. Servelet은 모델 자바 객체의 메서드를 호출한다.
-4. 데이터를 가공하여 값 객체를 생성하거나, JDBC를 사용하여 데이터베이스와의 인터랙션을 통해 값 객체를 생성한다.
-5. 업무 수행을 마친 결과값을 컨트롤러에게 반환한다.
-6. 컨트롤러는 모델로부터 받은 결과값을 View에게 전달한다.
-7. JSP는 전달받은 값을 참조하여 출력할 결과 화면을 만들고 컨트롤러에게 전달한다.
-8. 뷰로부터 받은 화면을 웹 서버에게 전달한다.
-9. 웹 브라우저는 웹 서버로부터 요청한 결과값을 응답받으면 그 값을 화면에 출력한다.
-
-##### 참고자료
-
-- https://asfirstalways.tistory.com/180
+[해당 문서 참조](https://github.com/tini-min/Tech-Interview/tree/master/SoftwareEngineering/#mvc-패턴)
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#network)**
 
