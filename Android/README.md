@@ -103,8 +103,8 @@
 
 서비스는 아래의 두가지 case의 생명주기를 가집니다.
 
-1. startService()를 통해 호출된 서비스
-2. bindService()를 통해 호출된 서비스
+1. **startService()를 통해 호출된 서비스**
+2. **bindService()를 통해 호출된 서비스**
 
 ![Service 생명주기](./img/Service%20생명주기.png)
 
@@ -122,13 +122,13 @@
 
 - https://itmining.tistory.com/4?category=640759
 - https://bitsoul.tistory.com/108
-- https://velog.io/안드로이드-스레드Thread와-핸들러Handler
+- https://velog.io/@dlrmwl15/안드로이드-스레드Thread와-핸들러Handler
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
 
 ### ANR에 대해 설명해 주세요.
 
-Application Not Responding의 약자로 input 이벤트에 5초 간 반응하지 않거나, Broadcast Reciever가 10초 내로 실행을 하지 않을 때 즉, 메인 스레드가 일정 시간 특정 Task에 묶여있을 때 발생하는 오류입니다. 이를 해결하기 위해서는 시간을 소모하는 Task는 별도의 워커 스레드에서 처리하거나, 사용자에게 해당 Task의 진행 상태를 전시하여 기다리도록 합니다.
+`Application Not Responding`의 약자로 input 이벤트에 5초 간 반응하지 않거나, Broadcast Reciever가 10초 내로 실행을 하지 않을 때 즉, 메인 스레드가 일정 시간 특정 Task에 묶여있을 때 발생하는 오류입니다. 이를 해결하기 위해서는 시간을 소모하는 Task는 별도의 워커 스레드에서 처리하거나, 사용자에게 해당 Task의 진행 상태를 전시하여 기다리도록 합니다.
 
 **[뒤로](https://github.com/tini-min/Tech-Interview) / [위로](#android)**
 
@@ -156,8 +156,6 @@ Application Not Responding의 약자로 input 이벤트에 5초 간 반응하지
  <div markdown = "1">
 
 >시간적 여유가 있을 때 보충예정
-
-- [Fragment의 생명주기에 대해 설명해 주세요.](#fragment의-생명주기에-대해-설명해-주세요)
 
 </div>
 </details>
